@@ -1,0 +1,26 @@
+site_name: "Portfolio"
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - navigation.indexes
+plugins:
+  - search
+  - awesome-pages
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - glightbox
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.emoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
