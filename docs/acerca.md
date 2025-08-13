@@ -8,7 +8,9 @@ date: 2025-01-01
 Breve presentación personal, intereses y objetivos para este curso.
 
 ## Habilidades
-- Lenguajes / herramientas relevantes
+- Inglés C2
+- Python (Pandas, PyTorch, Numpy, Scykitlearn, Matplotlib)
+- Power BI, Tableau, R
 
 ## Contacto
-- Email institucional
+alexia.aurrecochea@correo.ucu.edu.uy
