@@ -3,7 +3,7 @@ title: "Práctica 1"
 date: 2025-01-01
 ---
 
-# Entrada 01 — Mi primera experiencia
+# Práctica 1 – Análisis Exploratorio del Dataset Iris 
 
 ## Contexto
 Actividad inicial del curso.
