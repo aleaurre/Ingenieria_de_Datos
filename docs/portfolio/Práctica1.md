@@ -1,6 +1,6 @@
 ---
 title: "Práctica 1"
-date: 2025-01-01
+date: 2025-08-13
 ---
 
 # Práctica 1 – Análisis Exploratorio del Dataset Iris 
