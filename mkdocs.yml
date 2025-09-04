@@ -6,7 +6,7 @@ repo_name: IA-PORTFOLIO-1
 site_dir: site
 
 theme:
-  name: mkdocs-material
+  name: material
   language: es
   logo: assets/placeholder.png
   favicon: assets/placeholder.png
@@ -16,6 +16,10 @@ theme:
     - navigation.top
     - toc.integrate
     - content.code.copy
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
 
 plugins:
   - search
@@ -34,12 +38,6 @@ markdown_extensions:
   - pymdownx.highlight
 
 edit_uri: blob/main/docs/
-
-theme:
-  palette:
-    - scheme: default
-      primary: custom
-      accent: custom
 
 extra_css:
   - assets/extra.css
