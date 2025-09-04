@@ -35,46 +35,46 @@ Combino formación técnica con interés por la educación y la divulgación, pa
 Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curiosidad técnica** y mi compromiso con la **innovación educativa**.
 
 ---
-
 ## Habilidades principales
 
-<div class="cards-grid">
+<div class="cards-grid skills">
 
 <div class="card">
-
-**Lenguajes y librerías**
-  
-- Python: `pandas`, `numpy`, `matplotlib`
-- ML/Deep Learning: `scikit-learn`, `PyTorch`
-- SQL (ETL, modelado, consultas avanzadas)
-</div>
-
-<div class="card">
-
-**Visualización y BI**
-  
-- Power BI (DAX, dashboards)
-- Tableau
-- Storytelling con datos
+<h3>Lenguajes y librerías</h3>
+<ul class="list-clean">
+  <li><span class="pill">Python</span> <span class="pill">pandas</span> <span class="pill">numpy</span> <span class="pill">matplotlib</span></li>
+  <li><span class="pill">scikit-learn</span> <span class="pill">PyTorch</span></li>
+  <li><span class="pill">SQL</span> (ETL, modelado, consultas)</li>
+</ul>
 </div>
 
 <div class="card">
-
-**Sistemas embebidos**
-  
-- AVR/ATmega328P (assembler, UART, timers, interrupciones)
-- Matriz LED 32×32 (HUB75)
+<h3>Visualización y BI</h3>
+<ul class="list-clean">
+  <li><span class="pill">Power BI</span> <span class="pill">DAX</span> <span class="pill">Tableau</span></li>
+  <li>Storytelling con datos</li>
+</ul>
 </div>
 
 <div class="card">
+<h3>Sistemas embebidos</h3>
+<ul class="list-clean">
+  <li><span class="pill">AVR/ATmega328P</span> <span class="pill">Assembler</span></li>
+  <li><span class="pill">UART</span> <span class="pill">Timers</span> <span class="pill">Interrupciones</span></li>
+  <li>Matriz LED 32×32 (HUB75)</li>
+</ul>
+</div>
 
-**Idiomas y comunicación**
-  
-- Inglés **C2**
-- Escritura técnica, docencia y mentoría
+<div class="card">
+<h3>Idiomas y comunicación</h3>
+<ul class="list-clean">
+  <li>Inglés <strong>C2</strong></li>
+  <li>Escritura técnica, docencia y mentoría</li>
+</ul>
 </div>
 
 </div>
+
 
 ---
 
@@ -88,32 +88,35 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 
 ---
 
-## Galería / Medios (opcional)
+## Galería / Medios
 
-<div class="cards-grid">
-
-<div class="card">
-<img src="assets/placeholder.png" alt="Demo 1" loading="lazy">
-**Reto IA — CEIBAL**  
-ETL + dashboards con análisis por quintiles IVS.
-</div>
+<div class="cards-grid media">
 
 <div class="card">
-<img src="assets/placeholder.png" alt="Demo 2" loading="lazy">
-**ATmega + 32×32**  
-Juego tipo Pac-Man: lógica y rendering en assembler.
+  <img src="assets/placeholder.png" alt="Reto IA — CEIBAL">
+  <div class="caption">Reto IA — CEIBAL
+    <small>ETL + dashboards con análisis por quintiles IVS</small>
+  </div>
 </div>
 
 <div class="card">
-<img src="assets/placeholder.png" alt="Demo 3" loading="lazy">
-**Grafos en Python**  
-Dijkstra/IDA*/Floyd-Warshall + visualizaciones.
+  <img src="assets/placeholder.png" alt="ATmega + 32×32">
+  <div class="caption">ATmega + 32×32
+    <small>Juego tipo Pac-Man: lógica y rendering en assembler</small>
+  </div>
+</div>
+
+<div class="card">
+  <img src="assets/placeholder.png" alt="Grafos en Python">
+  <div class="caption">Grafos en Python
+    <small>Dijkstra/IDA*/Floyd-Warshall + visualizaciones</small>
+  </div>
 </div>
 
 </div>
 
-> Reemplazá `assets/placeholder.png` por tus imágenes reales.  
-> También podés embeber videos de YouTube o GIFs (mismo bloque `card`).
+> Reemplazá `assets/placeholder.png` por tus imágenes reales.
+
 
 ---
 
@@ -121,6 +124,7 @@ Dijkstra/IDA*/Floyd-Warshall + visualizaciones.
 
 - 📧 alexia.aurrecochea@correo.ucu.edu.uy  
 - :material-github: [GitHub](https://github.com/tu-usuario) · :material-linkedin: [LinkedIn](https://www.linkedin.com/in/tu-handle/)
-[Descargar CV](assets/CV_AlexiaAurrecochea.pdf){ .md-button .md-button--primary }
+[Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
+
 
 

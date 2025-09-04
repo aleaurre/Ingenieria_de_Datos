@@ -6,6 +6,8 @@
   --md-accent-fg-color: #b23a48;            /* acento */
 }
 
+:root { --md-logo-height: 26px; } /* Logo tamaño */
+
 /* Hero + avatar circular */
 .profile-hero {
   display: flex;
@@ -39,3 +41,67 @@ a.md-button.md-button--primary {
   background: var(--md-primary-fg-color);
   border-color: var(--md-primary-fg-color);
 }
+
+/* Tarjetas de habilidades con acento burgundy */
+.cards-grid.skills .card {
+  border: 1px solid rgba(122, 31, 61, .25);      /* burgundy translúcido */
+  background: linear-gradient(180deg, #ffffff 0%, #fff6f8 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+
+.cards-grid.skills .card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.pill {
+  display: inline-block;
+  font-size: .85rem;
+  line-height: 1;
+  padding: .35rem .55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(122,31,61,.25);
+  background: #fde7ed;                          /* tono claro burgundy */
+  margin: .18rem .25rem .18rem 0;
+}
+
+/* lista compacta sin bullets */
+.list-clean {
+  list-style: none;
+  margin: .25rem 0 0 0;
+  padding: 0;
+}
+.list-clean li { margin: .2rem 0; }
+
+/* Cards de la galería con imagen full y cinta burgundy */
+.cards-grid.media .card {
+  padding: 0;                    /* la imagen va al borde */
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(122,31,61,.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  background: #fff;
+}
+.cards-grid.media .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+.cards-grid.media .card .caption {
+  background: #7a1f3d;           /* burgundy */
+  color: #fff;
+  padding: .75rem .9rem;
+  font-weight: 500;
+}
+.cards-grid.media .card .caption small {
+  display: block;
+  opacity: .9;
+  font-weight: 400;
+  margin-top: .25rem;
+}
+
+/* Separación extra para el botón de CV */
+.cv-btn { margin-top: 1rem; }          /* probá 1–2rem */
+

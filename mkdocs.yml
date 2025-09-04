@@ -8,8 +8,8 @@ site_dir: site
 theme:
   name: material
   language: es
-  logo: assets/placeholder.png
-  favicon: assets/placeholder.png
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
   features:
     - navigation.instant
     - navigation.sections
