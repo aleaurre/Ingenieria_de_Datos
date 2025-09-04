@@ -6,7 +6,7 @@ date: 2025-01-01
 # Acerca de mí
 
 <div class="profile-hero">
-  <img src="assets/alexia.jpg" alt="Foto de perfil de Alexia" loading="lazy">
+  <img src="assets/alexia.png" alt="Foto de perfil de Alexia" loading="lazy">
   <div>
     <h2 style="margin:0">Alexia Aurrecochea · Ingeniería en IA y Ciencia de Datos</h2>
     <p style="margin:.25rem 0 0 0">
@@ -93,23 +93,23 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="cards-grid media">
 
 <div class="card">
-  <img src="assets/placeholder.png" alt="Reto IA — CEIBAL">
-  <div class="caption">Reto IA — CEIBAL
-    <small>ETL + dashboards con análisis por quintiles IVS</small>
+  <img src="assets/placeholder.png" alt="Reto IA I — CEIBAL">
+  <div class="caption">Primer Reto de la Carrera de Ing. en IA y CD.
+    <small>ETL + dashboards con análisis por variables demográficas.</small>
   </div>
 </div>
 
 <div class="card">
-  <img src="assets/placeholder.png" alt="ATmega + 32×32">
-  <div class="caption">ATmega + 32×32
-    <small>Juego tipo Pac-Man: lógica y rendering en assembler</small>
+  <img src="assets/placeholder.png" alt="Tech Challenge Antel">
+  <div class="caption">Desafío ANCAP
+    <small>Creación y desarollo de un asistente virtual; chatbot inteligente. Focalización en el diseño de Agentes.</small>
   </div>
 </div>
 
 <div class="card">
-  <img src="assets/placeholder.png" alt="Grafos en Python">
-  <div class="caption">Grafos en Python
-    <small>Dijkstra/IDA*/Floyd-Warshall + visualizaciones</small>
+  <img src="assets/placeholder.png" alt="Feria de Ciencias">
+  <div class="caption">Orientadora de nivel Cardenal y Tero.
+    <small>Realización de investigación de impacto proteíco, e investigación de uso óptimo de la fibra del desecho de Yerba.</small>
   </div>
 </div>
 
@@ -124,7 +124,10 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 
 - 📧 alexia.aurrecochea@correo.ucu.edu.uy  
 - :material-github: [GitHub](https://github.com/tu-usuario) · :material-linkedin: [LinkedIn](https://www.linkedin.com/in/tu-handle/)
+</div>
 [Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
+</div>
+
 
 
 
