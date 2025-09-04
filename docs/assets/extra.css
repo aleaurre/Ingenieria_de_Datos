@@ -1,0 +1,41 @@
+/* ---- Paleta Burgundy (Material CSS vars) ---- */
+:root {
+  --md-primary-fg-color: #7a1f3d;           /* burgundy */
+  --md-primary-fg-color--light: #9c2542;
+  --md-primary-fg-color--dark: #5e132b;
+  --md-accent-fg-color: #b23a48;            /* acento */
+}
+
+/* Hero + avatar circular */
+.profile-hero {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+.profile-hero img {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--md-primary-fg-color);
+}
+
+/* Cajitas (cards) limpias */
+.card {
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--md-default-bg-color);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .8rem;
+}
+
+/* Botón primario más notorio */
+a.md-button.md-button--primary {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+}
