@@ -6,7 +6,7 @@ repo_name: IA-PORTFOLIO-1
 site_dir: site
 
 theme:
-  name: material
+  name: mkdocs-material
   language: es
   logo: assets/placeholder.png
   favicon: assets/placeholder.png
