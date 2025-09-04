@@ -10,10 +10,7 @@ date: 2025-01-01
   <div>
     <h2 style="margin:0">Alexia Aurrecochea · Ingeniería en IA y Ciencia de Datos</h2>
     <p style="margin:.25rem 0 0 0">
-      Enfocada en **IA aplicada**, **analítica de datos** y **sistemas embebidos**, con fuerte vocación por la educación y la divulgación científica.
-    </p>
-    <p style="margin:.25rem 0 0 0">
-      Actualmente desarrollo proyectos que integran <em>ETL + modelado + visualización</em>, y experiencias de aprendizaje en computación.
+      Enfocada en <bd>IA aplicada<bd>, <bd>analítica de datos<bd> y <bd>sistemas embebidos<bd>, con fuerte vocación por la educación y la <bd>divulgación científica<bd>. Actualmente desarrollo proyectos que integran <em>ETL + modelado + visualización</em>, y experiencias de aprendizaje en computación.
     </p>
     <p>
       <a class="md-button md-button--primary" href="../portfolio/">
@@ -124,9 +121,12 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 
 - 📧 alexia.aurrecochea@correo.ucu.edu.uy  
 - :material-github: [GitHub](https://github.com/tu-usuario) · :material-linkedin: [LinkedIn](https://www.linkedin.com/in/tu-handle/)
-</div>
-[Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
-</div>
+
+<p style="margin:.25rem 0 0 0">
+      [Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
+    </p>
+
+
 
 
 
