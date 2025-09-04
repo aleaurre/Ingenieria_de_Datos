@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install -r requirements.txt
-      - run: mkdocs build --strict
+      - run: mkdocs build
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

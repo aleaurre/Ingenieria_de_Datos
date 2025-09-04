@@ -121,6 +121,6 @@ Dijkstra/IDA*/Floyd-Warshall + visualizaciones.
 
 - 📧 alexia.aurrecochea@correo.ucu.edu.uy  
 - :material-github: [GitHub](https://github.com/tu-usuario) · :material-linkedin: [LinkedIn](https://www.linkedin.com/in/tu-handle/)
-[Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary }
+[Descargar CV](assets/CV_AlexiaAurrecochea.pdf){ .md-button .md-button--primary }
 
 
