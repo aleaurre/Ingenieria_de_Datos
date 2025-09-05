@@ -90,21 +90,21 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="cards-grid media">
 
 <div class="card">
-  <img src="assets/placeholder.png" alt="Reto IA I — CEIBAL">
+  <img src="assets/Ceibal.jpg" alt="Reto IA I — CEIBAL">
   <div class="caption">Primer Reto de la Carrera de Ing. en IA y CD.
     <small>ETL + dashboards con análisis por variables demográficas.</small>
   </div>
 </div>
 
 <div class="card">
-  <img src="assets/placeholder.png" alt="Tech Challenge Antel">
+  <img src="assets/TechChallenge.jpg" alt="Tech Challenge Antel">
   <div class="caption">Desafío ANCAP
     <small>Creación y desarollo de un asistente virtual; chatbot inteligente. Focalización en el diseño de Agentes.</small>
   </div>
 </div>
 
 <div class="card">
-  <img src="assets/placeholder.png" alt="Feria de Ciencias">
+  <img src="assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
   <div class="caption">Orientadora de nivel Cardenal y Tero.
     <small>Realización de investigación de impacto proteíco, e investigación de uso óptimo de la fibra del desecho de Yerba.</small>
   </div>
@@ -112,7 +112,7 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 
 </div>
 
-> Reemplazá `assets/placeholder.png` por tus imágenes reales.
+> Por más información respecto a los detalles de cada evento, acceder al enlace de Linkedin.
 
 
 ---
@@ -122,9 +122,11 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 - 📧 alexia.aurrecochea@correo.ucu.edu.uy  
 - :material-github: [GitHub](https://github.com/tu-usuario) · :material-linkedin: [LinkedIn](https://www.linkedin.com/in/tu-handle/)
 
-<p style="margin:.25rem 0 0 0">
-      [Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
-    </p>
+</p style="margin:.25rem 0 0 0">
+</p>
+
+[Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
+   
 
 
 
