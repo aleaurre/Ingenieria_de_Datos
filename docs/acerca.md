@@ -39,9 +39,10 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="x-card">
 <h3>Lenguajes y Librerías</h3>
 <ul class="list-clean">
-  <li><span class="pill">Python</span> <span class="pill">pandas</span> <span class="pill">numpy</span> <span class="pill">matplotlib</span></li>
-  <li><span class="pill">scikit-learn</span> <span class="pill">PyTorch</span></li>
-  <li><span class="pill">SQL</span> · ETL, modelado, KPIs, consultas</li>
+  <li><span class="pill">Python</span></li> 
+  <li> Pandas, Numpy, Scikitlearn, LangChain, PyTorch, etc.</li>
+  <li><span class="pill">SQL</span> <span class="pill">Mongo DB</span></li> 
+  <li>ETL, modelado, KPIs, consultas</li>
 </ul>
 </div>
 
@@ -57,8 +58,8 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <h3>Sistemas embebidos</h3>
 <ul class="list-clean">
   <li><span class="pill">Assembler</span> <span class="pill">C++</span></li>
-  <li>UART · Timers · Interrupciones</li>
-  <li>Matriz LED 32×32 (HUB75), ATmega328</li>
+  <li>UART, Timers, Interrupciones.</li>
+  <li>Matriz LED 32×32 (HUB75), ATmega328.</li>
 </ul>
 </div>
 
@@ -66,7 +67,9 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <h3>Idiomas y comunicación</h3>
 <ul class="list-clean">
   <li>Inglés <strong>C2</strong></li>
-  <li>Escritura técnica, docencia y mentoría</li>
+  <li>Escritura técnica, docencia y mentoría.</li>
+  <li>Prácticas en calidad de expositora en multiples eventos públicos.</li>
+  <li>Documentación científica e informática.</li>
 </ul>
 </div>
 
@@ -93,21 +96,21 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
   <div class="x-card">
     <img src="../assets/Ceibal.jpg" alt="Reto IA — CEIBAL">
     <div class="x-caption">Reto de Ing. en IA y CD.
-      <small>ETL + dashboards con análisis por variables demográficas.</small>
+      <small>ETL + dashboards con análisis por variables demográficas. Proyecto que brindo nuevos insights respecto a la relacion de los datalakes de Ceibal e INE.</small>
     </div>
   </div>
 
   <div class="x-card">
     <img src="../assets/TechChallenge.jpg" alt="Desafío ANCAP">
     <div class="x-caption">Desafío ANCAP
-      <small>Asistente virtual; diseño de Agentes.</small>
+      <small>Asistente virtual desarollado desde cero, con interface interactiva, relación a BD privada, permisos de usuarios y focalización en el diseño de Agentes.</small>
     </div>
   </div>
 
   <div class="x-card">
     <img src="../assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
-    <div class="x-caption">Orientadora de nivel Cardenal y Tero.
-      <small>Investigación de impacto proteico y uso de fibra de yerba.</small>
+    <div class="x-caption">Actividad de Becaria
+      <small>Orientadora de Clubes de Ciencia de nivel Cardenal y Tero. Investigación de impacto proteico y uso de fibra de yerba. Focalización en la aplicación del método científico.</small>
     </div>
   </div>
 
