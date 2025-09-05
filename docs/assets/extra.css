@@ -17,7 +17,10 @@
 }
 
 .profile-hero img {
-  width: 120px; height: 120px; border-radius: 50%;
+  /* era 120×120 — lo hacemos adaptable */
+  width: clamp(150px, 18vw, 220px);
+  height: clamp(150px, 18vw, 220px);
+  border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--md-primary-fg-color);
 }
@@ -75,32 +78,46 @@ a.md-button.md-button--primary {
 .list-clean li { margin: .2rem 0; }
 
 /* Cards de la galería con imagen full y cinta burgundy */
+/* Cards de la galería — SIN línea blanca al pie */
+.cards-grid.media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
 .cards-grid.media .card {
-  padding: 0;                    /* la imagen va al borde */
+  display: flex;                /* clave para evitar gaps */
+  flex-direction: column;
+  padding: 0;
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid rgba(122,31,61,.25);
   box-shadow: 0 2px 6px rgba(0,0,0,.04);
-  background: #fff;
+  background: #fff;             /* fondo de la card */
 }
+
 .cards-grid.media .card img {
+  display: block;               /* elimina baseline gap */
   width: 100%;
-  height: 150px;
+  height: 180px;                /* todas igual altura */
   object-fit: cover;
-  display: block;
+  line-height: 0;               /* belt-and-suspenders */
 }
+
 .cards-grid.media .card .caption {
-  background: #7a1f3d;           /* burgundy */
+  margin: 0;                    /* sin márgenes implícitos */
+  padding: .85rem 1rem;
+  background: #7a1f3d;          /* burgundy */
   color: #fff;
-  padding: .75rem .9rem;
-  font-weight: 500;
 }
+
 .cards-grid.media .card .caption small {
   display: block;
-  opacity: .9;
+  opacity: .92;
   font-weight: 400;
   margin-top: .25rem;
 }
+
 
 /* Separación extra para el botón de CV */
 .cv-btn { margin-top: 1rem; }          /* probá 1–2rem */

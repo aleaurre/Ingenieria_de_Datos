@@ -92,13 +92,13 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 
 ---
 
-## Galería / Medios
+## Eventos Destacados / Medios
 
 <div class="cards-grid media">
 
 <div class="card">
   <img src="../assets/Ceibal.jpg" alt="Reto IA I — CEIBAL">
-  <div class="caption">Primer Reto de la Carrera de Ing. en IA y CD.
+  <div class="caption">Reto de Ing. en IA y CD.
     <small>ETL + dashboards con análisis por variables demográficas.</small>
   </div>
 </div>
