@@ -34,50 +34,44 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 ---
 ## Habilidades principales
 
-<div class="cards-grid skills">
+<div class="x-cards-grid skills">
 
-<div class="card">
+<div class="x-card">
 <h3>Lenguajes y Librerías</h3>
 <ul class="list-clean">
-  <li><span class="pill">Python</span></li>
-  Pandas, Matplotlib, Numpy, SkLearn, Scipy, PyTorch.
-  Langchain, Langgraph, OpenAI, Vertex, etc.
-  <li><span class="pill">SQL</span></li>
-  ETL, modelado, KPIs, consultas
+  <li><span class="pill">Python</span> <span class="pill">pandas</span> <span class="pill">numpy</span> <span class="pill">matplotlib</span></li>
+  <li><span class="pill">scikit-learn</span> <span class="pill">PyTorch</span></li>
+  <li><span class="pill">SQL</span> · ETL, modelado, KPIs, consultas</li>
 </ul>
 </div>
 
-<div class="card">
+<div class="x-card">
 <h3>Visualización y BI</h3>
 <ul class="list-clean">
-  <li><span class="pill">Power BI</span></li>
-  <span class="pill">DAX</span> 
-  <span class="pill">Tableau</span>
-  Storytelling con datos
+  <li><span class="pill">Power BI</span> <span class="pill">DAX</span> <span class="pill">Tableau</span></li>
+  <li>Storytelling con datos</li>
 </ul>
 </div>
 
-<div class="card">
+<div class="x-card">
 <h3>Sistemas embebidos</h3>
 <ul class="list-clean">
-  <li><span class="pill">Assembler</span></li>
-  <li><span class="pill">C++</span></li>
-  UART, Timers, Interrupciones, etc.
-  Matriz LED 32×32 (HUB75), ATPmega328.
+  <li><span class="pill">Assembler</span> <span class="pill">C++</span></li>
+  <li>UART · Timers · Interrupciones</li>
+  <li>Matriz LED 32×32 (HUB75), ATmega328</li>
 </ul>
 </div>
 
-<div class="card">
+<div class="x-card">
 <h3>Idiomas y comunicación</h3>
 <ul class="list-clean">
   <li>Inglés <strong>C2</strong></li>
-  <li>Escritura técnica, docencia y mentoría.</li>
-  <li>Documentación científica e informática.</li>
-  <li>Actuación en calidad de expositora en multiples eventos públicos.</li>
+  <li>Escritura técnica, docencia y mentoría</li>
 </ul>
 </div>
 
 </div>
+
 
 
 ---
@@ -94,28 +88,28 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 
 ## Eventos Destacados / Medios
 
-<div class="cards-grid media">
+<div class="x-cards-grid">
 
-<div class="card">
-  <img src="../assets/Ceibal.jpg" alt="Reto IA I — CEIBAL">
-  <div class="caption">Reto de Ing. en IA y CD.
-    <small>ETL + dashboards con análisis por variables demográficas.</small>
+  <div class="x-card">
+    <img src="../assets/Ceibal.jpg" alt="Reto IA — CEIBAL">
+    <div class="x-caption">Reto de Ing. en IA y CD.
+      <small>ETL + dashboards con análisis por variables demográficas.</small>
+    </div>
   </div>
-</div>
 
-<div class="card">
-  <img src="../assets/TechChallenge.jpg" alt="Tech Challenge Antel">
-  <div class="caption">Desafío ANCAP
-    <small>Creación y desarollo de un asistente virtual; chatbot inteligente. Focalización en el diseño de Agentes.</small>
+  <div class="x-card">
+    <img src="../assets/TechChallenge.jpg" alt="Desafío ANCAP">
+    <div class="x-caption">Desafío ANCAP
+      <small>Asistente virtual; diseño de Agentes.</small>
+    </div>
   </div>
-</div>
 
-<div class="card">
-  <img src="../assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
-  <div class="caption">Orientadora de nivel Cardenal y Tero.
-    <small>Realización de investigación de impacto proteíco, e investigación de uso óptimo de la fibra del desecho de Yerba.</small>
+  <div class="x-card">
+    <img src="../assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
+    <div class="x-caption">Orientadora de nivel Cardenal y Tero.
+      <small>Investigación de impacto proteico y uso de fibra de yerba.</small>
+    </div>
   </div>
-</div>
 
 </div>
 
