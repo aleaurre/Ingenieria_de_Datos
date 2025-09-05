@@ -37,18 +37,22 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="cards-grid skills">
 
 <div class="card">
-<h3>Lenguajes y librerías</h3>
+<h3>Lenguajes y Librerías</h3>
 <ul class="list-clean">
-  <li><span class="pill">Python</span> <span class="pill">pandas</span> <span class="pill">numpy</span> <span class="pill">matplotlib</span></li>
-  <li><span class="pill">scikit-learn</span> <span class="pill">PyTorch</span></li>
-  <li><span class="pill">SQL</span> (ETL, modelado, consultas)</li>
+  <li><span class="pill">Python</span></li>
+  <li>(Pandas, Matplotlib, Numpy, SkLearn, Scipy, PyTorch)</li>
+  <li>(Langchain, Langgraph, OpenAI, Vertex, etc.)</li>
+  <li><span class="pill">SQL</span></li>
+  <li>(ETL, modelado, consultas)</li>
 </ul>
 </div>
 
 <div class="card">
 <h3>Visualización y BI</h3>
 <ul class="list-clean">
-  <li><span class="pill">Power BI</span> <span class="pill">DAX</span> <span class="pill">Tableau</span></li>
+  <li><span class="pill">Power BI</span> 
+  <span class="pill">DAX</span> 
+  <span class="pill">Tableau</span></li>
   <li>Storytelling con datos</li>
 </ul>
 </div>
@@ -56,9 +60,10 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="card">
 <h3>Sistemas embebidos</h3>
 <ul class="list-clean">
-  <li><span class="pill">AVR/ATmega328P</span> <span class="pill">Assembler</span></li>
-  <li><span class="pill">UART</span> <span class="pill">Timers</span> <span class="pill">Interrupciones</span></li>
-  <li>Matriz LED 32×32 (HUB75)</li>
+  <li><span class="pill">Assembler</span></li>
+  <li><span class="pill">C++</span></li>
+  <li>(UART, Timers, Interrupciones, etc.)</li>
+  <li>(Matriz LED 32×32 (HUB75), ATPmega328)</li>
 </ul>
 </div>
 
@@ -66,7 +71,9 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <h3>Idiomas y comunicación</h3>
 <ul class="list-clean">
   <li>Inglés <strong>C2</strong></li>
-  <li>Escritura técnica, docencia y mentoría</li>
+  <li>Escritura técnica, docencia y mentoría.</li>
+  <li>Documentación científica e informática.</li>
+  <li>Actuación en calidad de expositora en multiples eventos públicos.</li>
 </ul>
 </div>
 
@@ -120,7 +127,8 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 ## Contacto
 
 - 📧 alexia.aurrecochea@correo.ucu.edu.uy  
-- :material-github: [GitHub](https://github.com/tu-usuario) · :material-linkedin: [LinkedIn](https://www.linkedin.com/in/tu-handle/)
+- [Linkedin](https://www.linkedin.com/in/alexia-aurrecochea-59940115a/?locale=es_ES) 
+- [GitHub](https://github.com/aleaurre)
 
 </p style="margin:.25rem 0 0 0">
 </p>
