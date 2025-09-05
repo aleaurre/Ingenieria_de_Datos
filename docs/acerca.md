@@ -6,7 +6,7 @@ date: 2025-01-01
 # Acerca de mí
 
 <div class="profile-hero">
-  <img src="{{ base_url }}assets/alexia.png" alt="Foto de perfil de Alexia" loading="lazy">
+  <img src="../assets/alexia.png" alt="Foto de perfil de Alexia" loading="lazy">
   <div>
     <h2 style="margin:0">Alexia Aurrecochea · Ingeniería en IA y Ciencia de Datos</h2>
     <p style="margin:.25rem 0 0 0">
@@ -39,21 +39,21 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="card">
 <h3>Lenguajes y Librerías</h3>
 <ul class="list-clean">
-  <li><span class="pill">Python</span>
-  <li>Pandas, Matplotlib, Numpy, SkLearn, Scipy, PyTorch 
-  <li>Langchain, Langgraph, OpenAI, Vertex, etc.</li>
-  <li><span class="pill">SQL</span>
-  <li>ETL, modelado, KPIs, consultas</li>
+  <li><span class="pill">Python</span></li>
+  Pandas, Matplotlib, Numpy, SkLearn, Scipy, PyTorch.
+  Langchain, Langgraph, OpenAI, Vertex, etc.
+  <li><span class="pill">SQL</span></li>
+  ETL, modelado, KPIs, consultas
 </ul>
 </div>
 
 <div class="card">
 <h3>Visualización y BI</h3>
 <ul class="list-clean">
-  <li><span class="pill">Power BI</span> 
+  <li><span class="pill">Power BI</span></li>
   <span class="pill">DAX</span> 
-  <span class="pill">Tableau</span></li>
-  <li>Storytelling con datos</li>
+  <span class="pill">Tableau</span>
+  Storytelling con datos
 </ul>
 </div>
 
@@ -62,8 +62,8 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <ul class="list-clean">
   <li><span class="pill">Assembler</span></li>
   <li><span class="pill">C++</span></li>
-  <li>UART, Timers, Interrupciones, etc.</li>
-  <li>Matriz LED 32×32 (HUB75), ATPmega328</li>
+  UART, Timers, Interrupciones, etc.
+  Matriz LED 32×32 (HUB75), ATPmega328.
 </ul>
 </div>
 
@@ -97,21 +97,21 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="cards-grid media">
 
 <div class="card">
-  <img src="{{ base_url }}assets/Ceibal.jpg" alt="Reto IA I — CEIBAL">
+  <img src="../assets/Ceibal.jpg" alt="Reto IA I — CEIBAL">
   <div class="caption">Primer Reto de la Carrera de Ing. en IA y CD.
     <small>ETL + dashboards con análisis por variables demográficas.</small>
   </div>
 </div>
 
 <div class="card">
-  <img src="{{ base_url }}assets/TechChallenge.jpg" alt="Tech Challenge Antel">
+  <img src="../assets/TechChallenge.jpg" alt="Tech Challenge Antel">
   <div class="caption">Desafío ANCAP
     <small>Creación y desarollo de un asistente virtual; chatbot inteligente. Focalización en el diseño de Agentes.</small>
   </div>
 </div>
 
 <div class="card">
-  <img src="{{ base_url }}assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
+  <img src="../assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
   <div class="caption">Orientadora de nivel Cardenal y Tero.
     <small>Realización de investigación de impacto proteíco, e investigación de uso óptimo de la fibra del desecho de Yerba.</small>
   </div>
