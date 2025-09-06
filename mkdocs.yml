@@ -17,9 +17,21 @@ theme:
     - toc.integrate
     - content.code.copy
   palette:
-    - scheme: default
-      primary: custom
-      accent: custom
+        - scheme: default
+          primary: custom
+          accent: custom
+          toggle:
+            icon: material/weather-night
+            name: Modo oscuro
+        - scheme: slate
+          primary: custom
+          accent: custom
+          toggle:
+            icon: material/white-balance-sunny
+            name: Modo claro
+extra_css:
+  - assets/extra.css
+
 
 plugins:
   - search

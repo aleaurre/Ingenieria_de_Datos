@@ -16,7 +16,7 @@ date: 2025-01-01
       <a class="md-button md-button--primary" href="../portfolio/">
         Ver Portfolio
       </a>
-      <a class="md-button" href="mailto:alexia.aurrecochea@correo.ucu.edu.uy">
+      <a class="md-button md-button--primary" href="../acerca/#contacto">
         Contactarme
       </a>
     </p>
@@ -55,6 +55,16 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 </div>
 
 <div class="x-card">
+<h3>Idiomas y comunicación</h3>
+<ul class="list-clean">
+  <li>Inglés <strong>C2</strong></li>
+  <li>Escritura técnica, docencia y mentoría.</li>
+  <li>Prácticas en calidad de expositora en multiples eventos públicos.</li>
+  <li>Documentación científica e informática.</li>
+</ul>
+</div>
+
+<div class="x-card">
 <h3>Sistemas embebidos</h3>
 <ul class="list-clean">
   <li><span class="pill">Assembler</span> <span class="pill">C++</span></li>
@@ -64,12 +74,13 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 </div>
 
 <div class="x-card">
-<h3>Idiomas y comunicación</h3>
+<h3>Habilidades blandas</h3>
 <ul class="list-clean">
-  <li>Inglés <strong>C2</strong></li>
-  <li>Escritura técnica, docencia y mentoría.</li>
-  <li>Prácticas en calidad de expositora en multiples eventos públicos.</li>
-  <li>Documentación científica e informática.</li>
+  <li><span class="pill">Proactividad</span></li> 
+  <li><span class="pill">Responsabilidad</span></li>
+  <li><span class="pill">Liderazgo</span></li> 
+  <li><span class="pill">Versatibilidad</span></li>
+  <li><span class="pill">Determinación</span></li>
 </ul>
 </div>
 
@@ -128,7 +139,7 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 - [GitHub](https://github.com/aleaurre)
 
 
-[Descargar CV](assets/CV_Alexia.pdf){ .md-button .md-button--primary .cv-btn }
+[Descargar CV](assets/CV_AlexiaAurrecochea.pdf){ .md-button .md-button--primary .cv-btn }
    
 
 
