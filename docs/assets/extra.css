@@ -226,8 +226,32 @@ a.md-button.md-button--primary:hover{
   overflow: hidden;
 }
 
-/* Botón: que no se trunque y quede al fondo del card */
+/* Línea de acciones en cada tarjeta del Portafolio */
 .md-typeset .cards-grid.shortcuts > .card > p:last-of-type{
-  margin-top: auto;                     /* empuja el botón hacia abajo */
-  display: block;
+  margin-top: auto;              /* mantiene el bloque pegado abajo */
+  display: flex;                 /* ponemos los botones en fila */
+  align-items: center;
+  gap: 1.25rem;                  /* ← separación entre botón y estado */
+  flex-wrap: wrap;               /* no rompe en pantallas angostas */
 }
+
+
+/* ===== Portafolio: mostrar el estado (pill) arriba del botón ===== */
+.md-typeset .cards-grid.portfolio-list > .card > p:last-of-type{
+  margin-top: auto;                 /* mantiene el bloque pegado abajo   */
+  display: flex;                    /* línea de acciones como columna    */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;                       /* espacio entre estado y botón      */
+}
+
+/* Reordena: la pill primero, el botón debajo */
+.md-typeset .cards-grid.portfolio-list > .card > p:last-of-type .pill{
+  order: -1;
+}
+
+/* Opcional: ancho del botón al contenido (no a toda la fila) */
+.md-typeset .cards-grid.portfolio-list > .card > p:last-of-type .md-button{
+  width: fit-content;
+}
+

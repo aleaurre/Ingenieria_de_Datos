@@ -139,10 +139,6 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 - [GitHub](https://github.com/aleaurre)
 
 
-[Descargar CV](assets/CV_AlexiaAurrecochea.pdf){ .md-button .md-button--primary .cv-btn }
-   
-
-
 
 
 

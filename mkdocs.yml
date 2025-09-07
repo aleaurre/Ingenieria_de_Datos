@@ -44,14 +44,19 @@ markdown_extensions:
   - admonition
   - attr_list
   - tables
+  - footnotes
   - toc:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight
+  - pymdownx.tasklist:
+      custom_checkbox: true         # dibuja los checkboxes bonitos
+      clickable_checkbox: true      # opcional: permite clicarlos (no persiste)
 
 edit_uri: blob/main/docs/
 
 extra_css:
   - assets/extra.css
+
 
