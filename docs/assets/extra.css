@@ -193,3 +193,41 @@ a.md-button.md-button--primary:hover{
     height: clamp(100px, 30vw, 150px);
   }
 }
+
+/* ====== Tarjetas "Atajos": clamp de líneas y botón pegado abajo ====== */
+.md-typeset .cards-grid.shortcuts{
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.md-typeset .cards-grid.shortcuts > .card{
+  padding: 1.1rem;
+  min-height: 230px;                    /* altura coherente entre tarjetas */
+  gap: .5rem;
+}
+
+/* Título: máximo 2 líneas con elipsis */
+.md-typeset .cards-grid.shortcuts > .card h3{
+  margin: 0 0 .35rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;                /* Safari/Chromium */
+  line-clamp: 2;                        /* especificación nueva */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Descripción: máximo 3 líneas con elipsis */
+.md-typeset .cards-grid.shortcuts > .card > p:first-of-type{
+  color: var(--text-2);
+  margin: 0 0 .6rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Botón: que no se trunque y quede al fondo del card */
+.md-typeset .cards-grid.shortcuts > .card > p:last-of-type{
+  margin-top: auto;                     /* empuja el botón hacia abajo */
+  display: block;
+}
