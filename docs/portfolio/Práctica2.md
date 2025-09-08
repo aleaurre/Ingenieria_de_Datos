@@ -118,13 +118,6 @@ mkdocs serve           # servidor local en http://127.0.0.1:8000
     También confirmé que Material para MkDocs resuelve rápido la navegación con tarjetas y pills, manteniendo consistencia visual con mínimas líneas en extra.css.
     A futuro, este setup permite iterar contenido sin tocar configuración: cada push publica, lo que alinea bien el ritmo de trabajo con la entrega en WebAsignatura.
 
----
 
-## Referencias
--  Consigna oficial de la práctica: https://juanfkurucz.com/ucu-id/ut1/02-portafolio-github-pages/
--  MkDocs — documentación: https://www.mkdocs.org/
--  Material for MkDocs — documentación: https://squidfunk.github.io/mkdocs-material/
--  GitHub Pages — guía: https://docs.github.com/pages
--  GitHub Actions — conceptos y workflows: https://docs.github.com/actions
 
 

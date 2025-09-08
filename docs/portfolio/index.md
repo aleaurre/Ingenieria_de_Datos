@@ -80,8 +80,8 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 3 — Visualización</h3>
-    <p>Visualizaciones y narrativa con foco en decisiones (dashboards/figuras clave).</p>
+    <h3>Práctica 3 — EDA Multi-fuentes y Joins - Fill in the Blanks</h3>
+    <p>Análisis y visualizaciones a partir de caminos.</p>
     <p class="actions">
       <span class="pill">Completado</span>
       <a class="md-button md-button--primary" href="Práctica3/">Abrir</a>
@@ -89,8 +89,8 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 4 — Netflix</h3>
-    <p>Análisis y visualizaciones a partir de catálogos; storytelling y conclusiones.</p>
+    <h3>Práctica 4 — EDA Netflix con Visualizaciones - Fill in the Blanks</h3>
+    <p>Visualizaciones y narrativa con foco en decisiones contextualizadas a la plataforma.</p>
     <p class="actions">
       <span class="pill">Completado</span>
       <a class="md-button md-button--primary" href="Práctica4/">Abrir</a>

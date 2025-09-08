@@ -234,7 +234,6 @@ Actividad inicial del curso (EDA clásico sobre *Iris*). El objetivo es entender
 
 ## Referencias Particulares
 
-- Enunciado: <https://juanfkurucz.com/ucu-id/ut1/01-exploracion-iris/>  
 - Dataset: `sklearn.datasets.load_iris()` (Fisher, 1936)  
 - UCI Machine Learning Repository — *Iris*
 
