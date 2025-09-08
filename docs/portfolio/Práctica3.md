@@ -54,7 +54,7 @@ Parte de la **UT1**: ejercitar un EDA completo con **pandas** y visualizaciones 
 | Outliers y anomalías                                  | 20 m | 20 m | Años sospechosos, títulos duplicados, longitudes extremas. |
 | Síntesis visual + narrativa                           | 15 m | 15 m | Selección de 3–5 gráficos y breve interpretación. |
 
-> **Totales** — Estimado: ** 3 h ** · Real: ** 3 h 10 m**.
+> **Totales** — Estimado: **3 h** · Real: **3 h 10 m**.
 
 ---
 
