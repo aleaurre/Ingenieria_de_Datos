@@ -1,9 +1,10 @@
 ---
-title: "Índice del Portafolio"
-date: 2025-08-13
+title: "Portafolio"
+date: 7-09-2005
 ---
 
 # Portafolio
+
 
 Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 **objetivo → proceso → evidencia → reflexión**.
@@ -14,6 +15,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
     3. Añade la nueva página a la sección **Portfolio** del menú si hace falta.
 
 ---
+
 
 ## UT0: Setup & Publicación
 

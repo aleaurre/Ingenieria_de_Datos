@@ -13,6 +13,8 @@ theme:
   features:
     - navigation.instant
     - navigation.sections
+    - navigation.tabs 
+    - navigation.indexes
     - navigation.top
     - toc.integrate
     - content.code.copy
@@ -47,6 +49,7 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+      toc_depth: 2-3
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight
@@ -54,9 +57,22 @@ markdown_extensions:
       custom_checkbox: true         # dibuja los checkboxes bonitos
       clickable_checkbox: true      # opcional: permite clicarlos (no persiste)
 
+
+
 edit_uri: blob/main/docs/
 
 extra_css:
   - assets/extra.css
+
+nav:
+  - Inicio: index.md
+  - "Acerca de mí": acerca.md
+  - Portfolio:
+      - Índice: portfolio/index.md
+      - "01 — Análisis Exploratorio del dataset Iris": "portfolio/Práctica1.md"
+      - "02 — Publicación del Portafolio": "portfolio/Práctica2.md"
+      - "03 — EDA de Netflix con pandas": "portfolio/Práctica3.md"
+      - "04 — EDA Multifuentes + Joins": "portfolio/Práctica4.md"
+  - Recursos: recursos.md
 
 
