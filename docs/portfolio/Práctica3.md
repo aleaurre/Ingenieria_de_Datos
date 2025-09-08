@@ -68,17 +68,6 @@ Parte de la **UT1**: ejercitar un EDA completo con **pandas** y visualizaciones 
 - **Géneros/ratings**: `listed_in` **explode → strip → value_counts**; hist/stacked bar para ratings.  
 - **Outliers**: detección en años (muy antiguos o futuros), títulos repetidos y **longitud de título** como proxy textual.
 
-<details class="md-details">
-  <summary><strong>Paso a paso (ejecución)</strong></summary>
-
-  1. **Lectura** del CSV → `df.info()`, `df.head()`, `df.describe(include='all')`.  
-  2. **Nulos & duplicados** → `df.isna().sum()`, `df.duplicated().sum()`, políticas `dropna`/`fillna` caso-a-caso.  
-  3. **Tipos** → `value_counts()`, **countplot** y pie/donut.  
-  4. **Temporal** → `pd.to_numeric(release_year, errors='coerce')` + líneas/áreas; filtro `>= 2000`.  
-  5. **Geografía** → `country.str.split(',').explode().str.strip()`; barplot horizontal top-países.  
-  6. **Géneros** → `listed_in.str.get_dummies(sep=', ')` (alternativa a explode) para rankings y co-ocurrencias.  
-  7. **Outliers** → boxplot/hist para años; análisis de `title_length`; top títulos duplicados.  
-</details>
 
 ---
 
