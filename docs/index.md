@@ -21,7 +21,7 @@ date: 2025-01-01
 
 1. **Acerca de mí:** contexto, habilidades y galería breve.  
 2. **Portfolio:** cada práctica es una entrada con objetivo → proceso → evidencia → reflexión.  
-3. **Recursos:** snippets, plantillas y referencias que utilizadas durante el semestre.
+3. **Recursos:** snippets, plantillas y referencias utilizadas durante el semestre.
 
 ## Atajos
 
