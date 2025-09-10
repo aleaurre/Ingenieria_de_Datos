@@ -5,7 +5,7 @@ nav:
   - Recursos: recursos.md
 arrange:
   - index.md
-  - portfolio
+  - portfolio/
   - recursos.md
   - acerca.md
 

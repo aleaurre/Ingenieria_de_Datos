@@ -107,7 +107,8 @@ Análisis integrado a escala: viajes (~3M/mes) + **lookup** de zonas (borough/zo
 ---
 
 ## Evidencias
-- [**Notebook (.ipynb) dentro del sitio**](../../evidencias/Aurrecochea-Practica4.ipynb)
+- [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Practica4.ipynb)
+- [**README (.md)**](../../evidencias/README-Practica4.ipynb)
 
 ---
 

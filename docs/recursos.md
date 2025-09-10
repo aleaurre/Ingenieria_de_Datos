@@ -30,4 +30,4 @@ date: 2025-01-01
 | NumPy | <https://numpy.org/doc/> | Cómputo numérico y arreglos N-dim. | Intro–Intermedio |
 | Matplotlib | <https://matplotlib.org/stable/> | Graficación base en Python. | Intro–Intermedio |
 | Seaborn | <https://seaborn.pydata.org/> | Visualización estadística de alto nivel. | Intro |
-| Scikit-learn — User Guide | <https://scikit-learn.org/stable/user
+| Scikit-learn — User Guide | <https://scikit-learn.org/stable/user> | Guía concisa y aplicable. | Intro-Intermedio |
