@@ -134,6 +134,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 - *Pandas Missing Data Documentation* —  
   <https://pandas.pydata.org/docs/user_guide/missing_data.html>
 
+
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
@@ -144,10 +145,6 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
       <a class="md-button md-button--primary" href="Práctica5/">Abrir</a>
     </p>
   </div>
-
-</div>
-
-<div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
     <h3>Próximamente</h3>
