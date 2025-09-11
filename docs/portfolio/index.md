@@ -137,8 +137,21 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
+    <h3>Práctica 5 — Missing Data Detective </h3>
+    <p>Aprender a detectar y analizar datos faltantes (MCAR, MAR, MNAR).</p>
+    <p class="actions">
+      <span class="pill">En Proceso</span>
+      <a class="md-button md-button--primary" href="Práctica5/">Abrir</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="cards-grid shortcuts portfolio-list">
+
+  <div class="card">
     <h3>Próximamente</h3>
-    <p>Las prácticas de esta unidad se publicarán aquí cuando estén disponibles.</p>
+    <p>Las prácticas faltantes de esta unidad se publicarán aquí cuando estén disponibles.</p>
     <p class="actions">
       <span class="pill">En preparación</span>
       <a class="md-button" href="../">Volver al índice</a>
