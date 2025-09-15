@@ -153,7 +153,7 @@ Actividad inicial del curso (EDA clásico sobre *Iris*). El objetivo es entender
 <div class="cards-grid media">
 
   <div class="card">
-    <img src="../../assets/pairplot.png" alt="Pairplot Iris" loading="lazy">
+    <img src="../../assets/Práctica1/pairplot.png" alt="Pairplot Iris" loading="lazy">
     <div class="caption">
       Pairplot — todas las combinaciones
       <small><a href="{{ page.meta.drive_viz }}" target="_blank">Abrir carpeta</a></small>
@@ -161,7 +161,7 @@ Actividad inicial del curso (EDA clásico sobre *Iris*). El objetivo es entender
   </div>
 
   <div class="card">
-    <img src="../../assets/hist_petal_length.png" alt="Histograma por largo de pétalos" loading="lazy">
+    <img src="../../assets/Práctica1/hist_petal_length.png" alt="Histograma por largo de pétalos" loading="lazy">
     <div class="caption">
       Histograma <code>petal_length</code>
       <small>Separabilidad clara por especie</small>
@@ -169,7 +169,7 @@ Actividad inicial del curso (EDA clásico sobre *Iris*). El objetivo es entender
   </div>
 
   <div class="card">
-    <img src="../../assets/corr.png" alt="Heatmap correlaciones" loading="lazy">
+    <img src="../../assets/Práctica1/corr.png" alt="Heatmap correlaciones" loading="lazy">
     <div class="caption">
       Heatmap de correlaciones
       <small>Variables de pétalo dominan la señal</small>

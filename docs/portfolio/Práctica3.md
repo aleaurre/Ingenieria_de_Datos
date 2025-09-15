@@ -109,8 +109,7 @@ Parte de la **UT1**: ejercitar un EDA completo con **pandas** y visualizaciones 
 
 ## Evidencias
 
--  [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Practica3.ipynb)
--  [**README (.md)**](../../evidencias/README-Practica3.ipynb)
+-  [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Práctica3.ipynb)
 
 ---
 
