@@ -6,7 +6,7 @@ date: 2025-01-01
 # Acerca de mí
 
 <div class="profile-hero">
-  <img src="../assets/alexia.png" alt="Foto de perfil de Alexia" loading="lazy">
+  <img src="../assets/acerca/alexia.png" alt="Foto de perfil de Alexia" loading="lazy">
   <div>
     <h2 style="margin:0">Alexia Aurrecochea · Ingeniería en IA y Ciencia de Datos</h2>
     <p style="margin:.25rem 0 0 0">
@@ -105,21 +105,21 @@ Este portfolio reúne proyectos que reflejan mi **perfil analítico**, mi **curi
 <div class="x-cards-grid">
 
   <div class="x-card">
-    <img src="../assets/Ceibal.jpg" alt="Reto IA — CEIBAL">
+    <img src="../assets/acerca/Ceibal.jpg" alt="Reto IA — CEIBAL">
     <div class="x-caption">Reto de Ing. en IA y CD.
       <small>ETL + dashboards con análisis por variables demográficas. Proyecto que brindo nuevos insights respecto a la relacion de los datalakes de Ceibal e INE.</small>
     </div>
   </div>
 
   <div class="x-card">
-    <img src="../assets/TechChallenge.jpg" alt="Desafío ANCAP">
+    <img src="../assets/acerca/TechChallenge.jpg" alt="Desafío ANCAP">
     <div class="x-caption">Desafío ANCAP
       <small>Asistente virtual desarollado desde cero, con interface interactiva, relación a BD privada, permisos de usuarios y focalización en el diseño de Agentes.</small>
     </div>
   </div>
 
   <div class="x-card">
-    <img src="../assets/FeriaCiencias.jpg" alt="Feria de Ciencias">
+    <img src="../assets/acerca/FeriaCiencias.jpg" alt="Feria de Ciencias">
     <div class="x-caption">Actividad de Becaria
       <small>Orientadora de Clubes de Ciencia de nivel Cardenal y Tero. Investigación de impacto proteico y uso de fibra de yerba. Focalización en la aplicación del método científico.</small>
     </div>
