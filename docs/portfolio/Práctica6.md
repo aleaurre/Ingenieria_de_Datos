@@ -242,8 +242,27 @@ Los modelos sensibles a distancias o magnitudes (KNN, SVM, regresiones lineales 
 ---
 
 ## Próximos pasos
-- Probar escaladores en KNN, SVR y Random Forest.  
-- Evaluar `TransformedTargetRegressor` para aplicar log al target.  
-- Medir con múltiples métricas (RMSE, MAE, MAPE).  
-- Agregar winsorización para casos extremos en Lot Area.
+- [ ] Probar escaladores en KNN, SVR y Random Forest.  
+- [ ] Evaluar `TransformedTargetRegressor` para aplicar log al target.  
+- [ ] Medir con múltiples métricas (RMSE, MAE, MAPE).  
+- [ ] Agregar winsorización para casos extremos en Lot Area.
 
+---
+## De cara a futuros proyectos:
+- Voy a incorporar **TransformedTargetRegressor** para transformar también el *target* en datasets sesgados.  
+- Planeo probar **combinaciones de transformers** (ej. log1p + RobustScaler) para casos con outliers extremos.  
+- Voy a documentar cada decisión en un **ADR-lite** (mini registro de decisiones), lo que facilita replicar o defender el pipeline en entornos profesionales.  
+- Finalmente, pienso incluir estas comparaciones en un **repositorio de “recetas de preprocesamiento”** propio, para reutilizarlas rápidamente en proyectos de machine learning.
+
+## 🏆 MI CHECKLIST PERSONAL PARA PROYECTOS DE DATOS:
+
+- [ ] 1. ¿Las features están en escalas muy diferentes?
+- [ ] 2. ¿Mi proceso necesita escalado?  
+- [ ] 3. ¿Hay outliers evidentes? → ¿RobustScaler?
+- [ ] 4. ¿Datos muy sesgados? → ¿Log transform?
+- [ ] 5. ¿Estoy usando Pipeline? → SIEMPRE (anti-leakage)
+- [ ] 6. ¿Split ANTES de transformar? → OBLIGATORIO
+- [ ] 7. ¿Cross-validation honesta? → Pipeline + CV
+- [ ] 8. ¿Resultados realistas vs optimistas? → Detectar leakage
+- [ ] 9. ¿Documenté mi elección de transformadores?
+- [ ] 10. ¿Mi pipeline es reproducible?
