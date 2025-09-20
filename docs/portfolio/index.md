@@ -141,8 +141,17 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
     <h3>Práctica 5 — Missing Data Detective </h3>
     <p>Aprender a detectar y analizar datos faltantes (MCAR, MAR, MNAR).</p>
     <p class="actions">
-      <span class="pill">En Proceso</span>
+      <span class="pill">Completado</span>
       <a class="md-button md-button--primary" href="Práctica5/">Abrir</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Práctica 6 — Feature Scaling & Anti-Leakage </h3>
+    <p> Generación de un Pipeline mediante Exploración Abierta.</p>
+    <p class="actions">
+      <span class="pill">En Proceso</span>
+      <a class="md-button md-button--primary" href="Práctica6/">Abrir</a>
     </p>
   </div>
 
