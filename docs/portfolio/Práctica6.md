@@ -112,6 +112,7 @@ Los modelos sensibles a distancias o magnitudes (KNN, SVM, regresiones lineales 
 
 ## Evidencias
 - [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Práctica6.ipynb)
+- [**Notebook (.ipynb) de Profundización en el análisis (BONUS)**](../../evidencias/Aurrecochea-Práctica6Bonus.ipynb)
 
 <div class="cards-grid media">
 

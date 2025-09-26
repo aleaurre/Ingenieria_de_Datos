@@ -150,10 +150,52 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
     <h3>Práctica 6 — Feature Scaling & Anti-Leakage </h3>
     <p> Generación de un Pipeline mediante Exploración Abierta.</p>
     <p class="actions">
-      <span class="pill">En Proceso</span>
+      <span class="pill">Completado</span>
       <a class="md-button md-button--primary" href="Práctica6/">Abrir</a>
     </p>
   </div>
+
+  <div class="card">
+    <h3>Práctica 7 — Detectar y Corregir Sesgo con Fairlearn </h3>
+    <p> Detección del sesgo en tres datasets distintos.</p>
+    <p class="actions">
+      <span class="pill">Completado</span>
+      <a class="md-button md-button--primary" href="Práctica7/">Abrir</a>
+    </p>
+  </div>
+
+</div>
+
+---
+
+## UT3: Feature Engineering
+
+**Al completar UT3, el estudiante será capaz de:**
+
+- Crear **features** derivadas relevantes según el dominio.
+- Aplicar técnicas avanzadas de **encoding categórico**.  
+- Manejar **variables de alta cardinalidad** efectivamente. 
+- Implementar **PCA** para reducción dimensional.  
+- Interpretar **componentes principales** y varianza explicada.  
+- Construir **pipelines** de feature engineering escalables. 
+
+**Lecturas mínimas (Evaluación el 01/10):**
+
+- Zheng, A., & Casari, A. (2018). *Feature Engineering for Machine Learning*. O’Reilly Media.  
+1. Cap. 2 (Fancy Tricks with Simple Numbers) – Transformaciones numéricas, binarización, interacciones  
+2. Cap. 5 (Categorical Variables) – One-hot, label, ordinal y target encoding  
+3. Cap. 6 (Dimensionality Reduction) – PCA, feature selection, curse of dimensionality 
+- [Kaggle Feature Engineering – Curso Completo](https://www.kaggle.com/learn/feature-engineering)
+
+**Lecturas Totales:**
+
+**Scikit-learn Preprocessing & Encoders:**
+- [Encoding Categorical Features](https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features)  
+- [PCA](https://scikit-learn.org/stable/modules/decomposition.html#pca)  
+- [ColumnTransformer & Pipeline](https://scikit-learn.org/stable/modules/compose.html) 
+
+
+<div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
     <h3>Próximamente</h3>
