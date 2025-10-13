@@ -198,6 +198,15 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
+    <h3>Práctica 8 — Feature Engineering con Pandas </h3>
+    <p> Creación de Features derivadas que capturen patrones no obvios de los datos.</p>
+    <p class="actions">
+      <span class="pill">Completado</span>
+      <a class="md-button md-button--primary" href="Práctica8/">Abrir</a>
+    </p>
+  </div>
+
+  <div class="card">
     <h3>Próximamente</h3>
     <p>Las prácticas faltantes de esta unidad se publicarán aquí cuando estén disponibles.</p>
     <p class="actions">
