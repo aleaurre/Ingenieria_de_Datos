@@ -190,6 +190,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 **Lecturas Totales:**
 
 **Scikit-learn Preprocessing & Encoders:**
+
 - [Encoding Categorical Features](https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features)  
 - [PCA](https://scikit-learn.org/stable/modules/decomposition.html#pca)  
 - [ColumnTransformer & Pipeline](https://scikit-learn.org/stable/modules/compose.html) 
@@ -203,6 +204,15 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
     <p class="actions">
       <span class="pill">Completado</span>
       <a class="md-button md-button--primary" href="Práctica8/">Abrir</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Práctica 9 — Encoding Avanzado y Target Encoding </h3>
+    <p> Comparar diferentes técnicas de encoding para maximizar la precisión del modelo de clasificación.</p>
+    <p class="actions">
+      <span class="pill">Completado</span>
+      <a class="md-button md-button--primary" href="Práctica9/">Abrir</a>
     </p>
   </div>
 
