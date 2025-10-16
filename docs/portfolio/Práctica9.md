@@ -249,7 +249,7 @@ El grupo logró un **pipeline robusto, modular y reproducible**, alineado con la
 8. **Añadir documentación automática del pipeline (`sklearn.set_config(display='diagram')`)** para comunicar claramente la arquitectura.  
 
 ---
-
+---
 
 ## 🔁 BONUS — Extensión de la práctica (Ames Housing)
 
