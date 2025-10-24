@@ -48,8 +48,8 @@ El caso se basa en una empresa inmobiliaria que busca **predecir precios de vivi
 Se configuró el entorno con **pandas**, **numpy**, **matplotlib** y **seaborn**, estableciendo estilo visual (`viridis`) y reproducibilidad (`random_state=42`).  
 Luego se generó un dataset de **1000 viviendas** con variables como precio, superficie, cantidad de habitaciones, año de construcción, tamaño de lote, distancia a la ciudad, rating escolar y tasa de criminalidad.  
 
-📊 **Dimensión inicial:** 10 columnas × 1000 filas  
-📈 **Tiempo de ejecución:** 15 min  
+**Dimensión inicial:** 10 columnas × 1000 filas  
+**Tiempo de ejecución:** 15 min  
 
 ---
 
@@ -63,8 +63,8 @@ Se diseñaron **12 nuevas variables**, distribuidas en categorías clave:
 | **Transformaciones matemáticas** | `log_price`, `sqrt_sqft`, `sqft_squared` | Normalizar y mejorar la interpretabilidad. |
 | **Compuestas (scores)** | `luxury_score`, `location_score` | Integrar factores de confort, amenities y entorno. |
 
-📊 **Resultado:** Dataset ampliado a **22 columnas**.  
-⚙️ **Tiempo de ejecución:** 45 min  
+**Resultado:** Dataset ampliado a **22 columnas**.  
+**Tiempo de ejecución:** 45 min  
 
 ---
 
@@ -78,8 +78,8 @@ El análisis reveló que las variables transformadas (`log_price`, `sqrt_sqft`) 
 | `sqft_per_bedroom` | 57.15 | 39.58 | 4.5% |
 | `property_age` | 22.33 | 12.48 | 0.0% |
 
-📈 **Conclusión:** las nuevas features aportan granularidad sin introducir ruido excesivo.  
-🕓 **Tiempo de ejecución:** 35 min  
+**Conclusión:** las nuevas features aportan granularidad sin introducir ruido excesivo.  
+**Tiempo de ejecución:** 35 min  
 
 ---
 
@@ -95,12 +95,12 @@ Resaltó `crime_rate` (0.1519), `lot_size` (0.1371), `school_rating` (0.1292) y 
 **c) Correlación lineal:**  
 Confirmó baja linealidad general (|r| < 0.1), lo que justifica el uso de métricas no lineales para capturar relaciones reales.
 
-📊 **Top 3 features globales:**  
+**Top 3 features globales:**  
 1. `crime_rate`  
 2. `lot_size`  
 3. `school_rating`  
 
-🕓 **Tiempo de ejecución:** 40 min  
+**Tiempo de ejecución:** 40 min  
 
 ---
 
@@ -124,8 +124,8 @@ Se exploraron nuevas *features* basadas en conocimiento de dominio:
 | `crowded_property` | 0.026 |
 | `location_score` | 0.009 |
 
-📈 Aunque las correlaciones lineales son bajas, estas variables capturan relaciones interpretables y potencialmente no lineales entre tamaño, ubicación y valor.  
-🕓 **Tiempo de ejecución:** 50 min  
+Aunque las correlaciones lineales son bajas, estas variables capturan relaciones interpretables y potencialmente no lineales entre tamaño, ubicación y valor.  
+**Tiempo de ejecución:** 50 min  
 
 ---
 
@@ -145,7 +145,7 @@ Se aplicaron las mismas técnicas sobre un extracto real del dataset **Ames Hous
 **Diferencias sintético vs real:**  
 Los datos reales presentan ruido, correlaciones espurias y efectos de localización que no aparecen en datos simulados, reforzando la necesidad del *feature engineering contextual*.  
 
-🕓 **Tiempo de ejecución:** 45 min  
+**Tiempo de ejecución:** 45 min  
 
 ---
 
@@ -219,8 +219,6 @@ El proceso permitió construir un conjunto de variables robustas, interpretables
 
 ---
 
----
-
 ## Bonus - Implementación de los próximos pasos
 
 Luego de completar la práctica base, se implementaron los próximos pasos planificados en un script adicional (`bonus_feature_engineering.py`) con el objetivo de evaluar la escalabilidad y robustez del pipeline.  
@@ -229,16 +227,16 @@ Estas mejoras se aplicaron **sobre los datasets sintético y Ames Housing**, inc
 ### Transformaciones polinómicas
 Se aplicaron **PolynomialFeatures (grado 2)** sobre las variables numéricas principales (`sqft`, `lot_size`, `property_age`, `school_rating`).  
 Esto permitió capturar relaciones no lineales y efectos de interacción que antes no eran visibles.  
-📈 *Resultado:* aumento de la capacidad explicativa (R² de 0.07 → 0.12) y mejor comportamiento en las regiones de precios medios-altos.
+*Resultado:* aumento de la capacidad explicativa (R² de 0.07 → 0.12) y mejor comportamiento en las regiones de precios medios-altos.
 
 ### Selección automática con RFE
 Mediante **Recursive Feature Elimination** y un modelo base `RandomForestRegressor`, se seleccionaron las 10 variables más relevantes.  
 Las más consistentes fueron `price_per_sqft`, `property_age`, `lot_size`, `crime_rate` y `school_rating`.  
-📊 *Resultado:* el conjunto reducido mantuvo el **89% del poder predictivo**, simplificando el modelo y mejorando la interpretabilidad.
+*Resultado:* el conjunto reducido mantuvo el **89% del poder predictivo**, simplificando el modelo y mejorando la interpretabilidad.
 
 ### Codificación categórica
 Se aplicó **One-Hot Encoding** sobre `Neighborhood` en el dataset Ames, permitiendo incorporar diferencias geográficas en la predicción de precios.  
-📊 *Resultado:* el R² del modelo lineal simple aumentó de 0.62 → **0.68**, confirmando el impacto del contexto espacial.
+*Resultado:* el R² del modelo lineal simple aumentó de 0.62 → **0.68**, confirmando el impacto del contexto espacial.
 
 ### Pipeline reproducible
 Se integraron todas las transformaciones dentro de un **Pipeline (ColumnTransformer + RandomForest)** que automatiza:
@@ -247,14 +245,13 @@ Se integraron todas las transformaciones dentro de un **Pipeline (ColumnTransfor
 - Codificación categórica (`OneHotEncoder`)
 - Entrenamiento (`RandomForestRegressor`)
 
-📈 *Métricas finales (Ames Housing expandido):*
+*Métricas finales (Ames Housing expandido):*
 | Métrica | Valor |
 |----------|--------|
 | R² test | 0.87 |
 | MAE test | 8 940.12 |
 | R² CV (media ± std) | 0.85 ± 0.03 |
 
----
 
 ### Conclusiones finales
 - Las **transformaciones polinómicas** aumentaron la sensibilidad a relaciones no lineales sin incrementar el sobreajuste.  
@@ -262,14 +259,14 @@ Se integraron todas las transformaciones dentro de un **Pipeline (ColumnTransfor
 - La **codificación categórica** introdujo un componente espacial crítico en el modelo.  
 - El **pipeline reproducible** consolidó todo el flujo, permitiendo reutilización, comparación de experimentos y despliegue automatizado.
 
-🧠 **Reflexión:**  
+**Reflexión:**  
 Aplicar estos pasos adicionales confirmó que la fase de *feature engineering* no termina con la creación de variables, sino que se profundiza al optimizar, seleccionar y operacionalizar las más significativas.  
 El resultado es un modelo más **robusto, explicativo y éticamente transparente**, alineado con las mejores prácticas de IA responsable.
 
-📂 **Archivo ejecutado:** [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Práctica8Bonus.ipynb).
+**Archivo ejecutado:** [**Script (.py)**](../../evidencias/Aurrecochea-Práctica8Bonus.ipynb).
 
 
-🕓 **Tiempo adicional total:** 2 h 15 m  
+**Tiempo adicional total:** 2 h 15 m  
 **Duración acumulada de la práctica:** 6 h 25 m
 
 ---

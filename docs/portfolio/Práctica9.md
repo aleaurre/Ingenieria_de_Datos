@@ -24,7 +24,7 @@ time_spent: "5 h 10 m"
 
 ---
 
-## 🎯 Contexto general
+## Contexto general
 
 Esta práctica corresponde a la **Unidad 3 (UT3-8)** del curso de *Inteligencia de Datos*, titulada  
 **“Encoding Avanzado y Target Encoding – Fill in the Blanks”**, basada en la pauta de  
@@ -41,7 +41,7 @@ Su propósito es **explorar estrategias de codificación de variables categóric
 
 ---
 
-## 💡 Objetivos específicos
+## Objetivos específicos
 
 1. Comprender las diferencias conceptuales entre **Label**, **One-Hot** y **Target Encoding**.  
 2. Evaluar su impacto en la **precisión, complejidad y dimensionalidad** del modelo.  
@@ -51,7 +51,7 @@ Su propósito es **explorar estrategias de codificación de variables categóric
 
 ---
 
-## 🧾 Pauta del assignment
+## Pauta del assignment
 
 La pauta original solicita el cumplimiento de las siguientes etapas:
 
@@ -71,7 +71,7 @@ Todas las etapas fueron completadas y documentadas con código.
 
 ---
 
-## 🧪 Experimentos principales
+## Experimentos principales
 
 | Método | Accuracy | AUC-ROC | F1-Score | Tiempo (s) | Nº Features |
 |:--|--:|--:|--:|--:|--:|
@@ -82,16 +82,16 @@ Todas las etapas fueron completadas y documentadas con código.
 
 ---
 
-## 🔎 Interpretación detallada de resultados
+## Interpretación detallada de resultados
 
-### 🧩 Label Encoding  
+### Label Encoding  
 - **Ventajas:** Simplicidad y velocidad; logra las mejores métricas globales (AUC = 0.91).  
 - **Limitaciones:** Asigna valores numéricos arbitrarios, introduciendo un orden inexistente entre categorías (p. ej. *Private = 1*, *Self-emp = 2*), lo que puede sesgar árboles o modelos lineales.  
 - **Conclusión:** útil solo en modelos insensibles al orden artificial (p. ej. Random Forest, Gradient Boosting).
 
 ---
 
-### 🧩 One-Hot Encoding (baja cardinalidad)
+### One-Hot Encoding (baja cardinalidad)
 - **Rendimiento:** accuracy ≈ 0.85 y AUC ≈ 0.90, con bajo tiempo de entrenamiento.  
 - **Ventaja:** Cada categoría se vuelve una variable binaria, preservando independencia semántica.  
 - **Desventaja:** Explosión dimensional (8 → 94 columnas) que aumenta memoria y tiempo de cómputo.  
@@ -99,7 +99,7 @@ Todas las etapas fueron completadas y documentadas con código.
 
 ---
 
-### 🧩 Target Encoding (alta cardinalidad)
+### Target Encoding (alta cardinalidad)
 - **Idea central:** reemplazar cada categoría por el promedio del target (ej. probabilidad de ingreso > 50K).  
 - **Resultado:** accuracy 0.80 – ligeramente menor, pero con **dimensionalidad > 10× menor**.  
 - **Ventajas:** compresión extrema, captura tendencias globales, reduce *curse of dimensionality*.  
@@ -108,7 +108,7 @@ Todas las etapas fueron completadas y documentadas con código.
 
 ---
 
-### 🧩 Pipeline Branched (mixto)
+### Pipeline Branched (mixto)
 - **Diseño:** combina *One-Hot* (baja cardinalidad) + *Target Encoding* (alta cardinalidad) + *StandardScaler* (numéricas).  
 - **Resultados:** accuracy 0.847 | AUC 0.899 | F1 0.662 | 30 features.  
 - **Ventajas:** modularidad, reproducibilidad, fácil escalado a producción.  
@@ -116,7 +116,7 @@ Todas las etapas fueron completadas y documentadas con código.
 
 ---
 
-## 📈 Análisis de Feature Importance y SHAP
+## Análisis de Feature Importance y SHAP
 
 Las 5 features más influyentes del pipeline mixto:
 
@@ -140,7 +140,7 @@ Las 5 features más influyentes del pipeline mixto:
 
 ---
 
-## 📷 Evidencias
+## Evidencias
 
 - [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Práctica9.ipynb) 
 
@@ -186,14 +186,14 @@ Las 5 features más influyentes del pipeline mixto:
 
 ---
 
-## ⚖️ Evaluación de Trade-Offs
+## Evaluación de Trade-Offs
 
 | Aspecto | Observación | Método óptimo |
 |:--|:--|:--|
-| **Precisión** | Label Encoding (0.86 AUC 0.91) | ✅ Label Encoding |
-| **Eficiencia temporal** | One-Hot más rápido (0.17 s) | ✅ One-Hot |
-| **Dimensionalidad** | Target Encoding redujo 94 → 6 | ✅ Target Encoding |
-| **Balance global** | Pipeline Branched mantiene equilibrio | ✅ Pipeline Branched |
+| **Precisión** | Label Encoding (0.86 AUC 0.91) | Label Encoding |
+| **Eficiencia temporal** | One-Hot más rápido (0.17 s) | One-Hot |
+| **Dimensionalidad** | Target Encoding redujo 94 → 6 | Target Encoding |
+| **Balance global** | Pipeline Branched mantiene equilibrio | Pipeline Branched |
 
 **Conclusión:**  
 El **Target Encoding** es la opción más eficiente en entornos productivos y datasets de gran escala,  
@@ -202,7 +202,7 @@ El **Label Encoding**, pese a su precisión, debe evitarse cuando las categoría
 
 ---
 
-## 🔬 Investigación Libre — Técnicas Adicionales
+## Investigación Libre — Técnicas Adicionales
 
 | Técnica | Descripción / Uso | Accuracy | Ventajas | Riesgos |
 |:--|:--|--:|:--|:--|
@@ -214,7 +214,7 @@ El **Label Encoding**, pese a su precisión, debe evitarse cuando las categoría
 
 ---
 
-## 🧭 Recomendaciones finales
+## Recomendaciones finales
 
 - En producción, utilizar el **Pipeline Branched**, integrando *One-Hot* y *Target Encoding* según cardinalidad.  
 - Evaluar **CatBoost Encoding** o **Hash Encoding** para datos de alta variabilidad.  
@@ -224,7 +224,7 @@ El **Label Encoding**, pese a su precisión, debe evitarse cuando las categoría
 
 ---
 
-## 🧠 Conclusiones generales
+## Conclusiones generales
 
 El trabajo demostró que la **etapa de codificación** es determinante en el desempeño del modelo.  
 La correcta elección del encoding influye no solo en la precisión, sino también en la interpretabilidad y el costo computacional.  
@@ -237,7 +237,7 @@ El grupo logró un **pipeline robusto, modular y reproducible**, alineado con la
 
 ---
 
-## 📋 Próximos Pasos (Bonus)
+## Próximos Pasos (Bonus)
 
 1. **Incorporar CatBoost Encoding** con ajuste de prior y posterior means.  
 2. **Analizar interacciones no lineales** entre features categóricas codificadas usando Partial Dependence Plots.  
@@ -249,14 +249,14 @@ El grupo logró un **pipeline robusto, modular y reproducible**, alineado con la
 8. **Añadir documentación automática del pipeline (`sklearn.set_config(display='diagram')`)** para comunicar claramente la arquitectura.  
 
 ---
----
 
-## 🔁 BONUS — Extensión de la práctica (Ames Housing)
+
+## BONUS — Extensión de la práctica (Ames Housing)
 
 **Objetivo.** Replicar y generalizar los aprendizajes de codificación categórica en un dataset distinto (Ames Housing), transformándolo en un problema de **clasificación binaria** (precio de venta > mediana) y comparando varios esquemas de *encoding* bajo una **arquitectura de pipeline con branching**.
 
-### ✅ Evidencia:
-- [**Notebook Bonus (.ipynb)**](../../evidencias/Aurrecochea-Práctica9Bonus.ipynb) .
+### Evidencia:
+- [**Script (.py)**](../../evidencias/Aurrecochea-Práctica9Bonus.ipynb) .
 
 ## Implementa
 - **Branching Pipeline (`ColumnTransformer`)**:
@@ -272,20 +272,12 @@ El grupo logró un **pipeline robusto, modular y reproducible**, alineado con la
 
 > Motivación: evita la **explosión dimensional** del One-Hot para cardinalidad alta y sigue la pauta de análisis/comparación de la práctica original.
 
-### 🧪 Resultados (resumen)
+### Resultados (resumen)
 - **Branched (CatBoost/Target) + HGB** logra el **mejor balance** entre AUC/Accuracy y dimensionalidad en presencia de categorías con muchos niveles.
 - **Binary/Hash** ofrece líneas base **compactas** y favorece a *LogReg*; útiles en escenarios de streaming o memoria restringida.
 - **One-Hot (all)** se acerca al mejor AUC cuando la cardinalidad efectiva es baja, a costa de más columnas.
 
 > En la práctica original, One-Hot (baja) y Branched alcanzaron AUC ≈ 0.90 con 30 features, mientras que Target (alta) redujo a 6 features con AUC ≈ 0.83; Label lideró en AUC pero introduce orden artificial.
 
-### 📦 Artefactos generados
-- `artifacts/resultados_modelos.csv` — tabla comparativa (Accuracy, AUC, F1, tiempo, #features).
-- `artifacts/gridsearch_cv_results.csv` — *GridSearchCV* completo.
-- `artifacts/model_*.joblib` — pipelines entrenados (listos para carga).
-- `artifacts/pipeline_diagrama.txt` — representación textual del pipeline.
-- `artifacts/shap_top_features.csv` — (opcional) principales features por impacto SHAP.
-- `artifacts/monitoring.json` — PSI train vs test (drift simple).
-
-### 📌 Conclusión de la extensión
+### Conclusión de la extensión
 La **arquitectura branched** con *CatBoost/Target Encoding* para alta cardinalidad, más *One-Hot* en baja, consolida un **pipeline escalable, reproducible y explicable**, en línea con la **pauta**: experimentar, **comparar** y seleccionar el método que **optimiza el trade-off** entre desempeño y dimensionalidad para su despliegue.

@@ -217,6 +217,23 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
+    <h3>Práctica 10 — PCA y Feature Selection </h3>
+    <p> Comparar PCA vs Feature Selection, evaluando trade-offs en contexto de negocios.</p>
+    <p class="actions">
+      <span class="pill">Completado</span>
+      <a class="md-button md-button--primary" href="Práctica10/">Abrir</a>
+    </p>
+  </div>
+</div>
+
+
+---
+
+## UT4: TBD
+
+<div class="cards-grid shortcuts portfolio-list">
+
+  <div class="card">
     <h3>Próximamente</h3>
     <p>Las prácticas faltantes de esta unidad se publicarán aquí cuando estén disponibles.</p>
     <p class="actions">

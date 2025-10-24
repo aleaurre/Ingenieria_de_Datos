@@ -255,7 +255,7 @@ Los modelos sensibles a distancias o magnitudes (KNN, SVM, regresiones lineales 
 - Voy a documentar cada decisión en un **ADR-lite** (mini registro de decisiones), lo que facilita replicar o defender el pipeline en entornos profesionales.  
 - Finalmente, pienso incluir estas comparaciones en un **repositorio de “recetas de preprocesamiento”** propio, para reutilizarlas rápidamente en proyectos de machine learning.
 
-## 🏆 MI CHECKLIST PERSONAL PARA PROYECTOS DE DATOS:
+## MI CHECKLIST PERSONAL PARA PROYECTOS DE DATOS:
 
 - [ ] 1. ¿Las features están en escalas muy diferentes?
 - [ ] 2. ¿Mi proceso necesita escalado?  

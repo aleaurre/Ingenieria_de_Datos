@@ -64,24 +64,23 @@ Los **faltantes** y **outliers** afectan la validez estadística y el desempeño
 
 ### 1) Carga y chequeos básicos
 - `df.shape`, `df.info()`, `df.isna().sum()`, `df.duplicated().sum()`, `df.memory_usage(deep=True)`.  
-- Mini **data dictionary** (nombre, unidad/tipo, semántica). :contentReference[oaicite:18]{index=18}
+- Mini **data dictionary** (nombre, unidad/tipo, semántica). 
 
 ### 2) *Missingness* sintético (para practicar diagnósticos)
 - **MCAR** (p.ej., `Year Built` ~8% aleatorio).  
 - **MAR** (p.ej., `Garage Area` condicionado a `Garage Type`).  
 - **MNAR** (p.ej., *truncation* en colas altas de `SalePrice`).  
-Documentar la lógica y sembrar `np.random.seed(42)`. :contentReference[oaicite:19]{index=19}
+Documentar la lógica y sembrar `np.random.seed(42)`. 
 
 ### 3) Auditoría y patrones
 - **Por columna:** conteo y %; Top-N con barra ordenada.  
 - **Por fila:** histograma de #faltantes.  
-- Opcional: matriz de co-faltantes (sin *missingno*, con `pandas`/`matplotlib`). :contentReference[oaicite:20]{index=20}
+- Opcional: matriz de co-faltantes (sin *missingno*, con `pandas`/`matplotlib`). 
 
 ### 4) Clasificar MCAR/MAR/MNAR (evidencia mínima)
 - **MCAR:** independencia respecto de otras columnas/grupos.  
 - **MAR:** asociación con variables observadas (tablas por grupo).  
-- **MNAR:** patrón ligado al propio valor (e.g., colas altas/altas tasas). :contentReference[oaicite:21]{index=21}
-
+- **MNAR:** patrón ligado al propio valor (e.g., colas altas/altas tasas). 
 ### 5) Outliers
 - **IQR:** límites `[Q1−1.5·IQR, Q3+1.5·IQR]`.  
 - **Z-score:** |z| > 3 si distribución ~normal.  
@@ -156,7 +155,7 @@ Documentar la lógica y sembrar `np.random.seed(42)`. :contentReference[oaicite:
 - **Reproducibilidad**: consolidar en `ColumnTransformer` para evitar divergencias entre EDA y producción.
 
 !!! warning "Riesgos / Supuestos"
-    - **Leakage**: imputación/escala ajustada con todo el dataset. → *Mitigación*: `fit` solo en **train**. :contentReference[oaicite:27]{index=27}  
+    - **Leakage**: imputación/escala ajustada con todo el dataset. → *Mitigación*: `fit` solo en **train**. 
     - **Sesgo por imputación**: medias arrastran colas; constantes agregan clases espurias.  
     - **Outliers verdaderos**: riesgo de eliminar señal de negocio. → *Mitigación*: contrastar con dominio.
 
