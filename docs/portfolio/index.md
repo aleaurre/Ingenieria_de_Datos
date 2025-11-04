@@ -215,8 +215,10 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
       <a class="md-button md-button--primary" href="Práctica9/">Abrir</a>
     </p>
   </div>
-
 </div>
+
+
+
 
 <div class="cards-grid shortcuts portfolio-list">
 
@@ -256,15 +258,10 @@ Al completar **UT4: Datos Especiales**, el estudiante será capaz de:
 ## 📚 Lecturas mínimas  
 **Evaluación el 05/11**
 
-### 1. Geoespacial
 - Brust, A. V. (2023). *Ciencia de Datos para Gente Sociable* – Cap. 6: Información geográfica y mapas.  
 - [Kaggle Geospatial Analysis](https://www.kaggle.com/learn/geospatial-analysis)  
 - [GeoPandas Documentation – User Guide](https://geopandas.org/en/stable/docs/user_guide.html) *(Introduction, CRS, Plotting)*  
-
-### 2. Audio
 - [librosa Documentation – Tutorial + feature.mfcc](https://librosa.org/doc/main/feature.html#mfcc)
-
-### 3. Imagen
 - [OpenCV Documentation – Feature Detection (SIFT y ORB)](https://docs.opencv.org/master/d7/d00/tutorial_meanshift.html)
 
 
