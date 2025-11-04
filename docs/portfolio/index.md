@@ -216,6 +216,10 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
     </p>
   </div>
 
+</div>
+
+<div class="cards-grid shortcuts portfolio-list">
+
   <div class="card">
     <h3>Práctica 10 — PCA y Feature Selection </h3>
     <p> Comparar PCA vs Feature Selection, evaluando trade-offs en contexto de negocios.</p>
