@@ -1,5 +1,5 @@
 ---
-title: "09 — Encoding Avanzado y Target Encoding"
+title: "09 - Encoding Avanzado y Target Encoding"
 date: 2025-10-16
 number: 9
 status: "Completada"

@@ -1,5 +1,5 @@
 ---
-title: "07 — Detección y Corrección de Sesgo con Fairlearn"
+title: "07 - Detección y Corrección de Sesgo con Fairlearn"
 date: 2025-09-26
 number: 7
 status: "Completada"

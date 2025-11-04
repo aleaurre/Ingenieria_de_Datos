@@ -1,5 +1,5 @@
 ---
-title: "06 — Feature Scaling & Anti-Leakage (Ames Housing)"
+title: "06 - Feature Scaling & Anti-Leakage (Ames Housing)"
 date: 2025-09-20
 number: 6
 status: "Completada"

@@ -1,5 +1,5 @@
 ---
-title: "03 — EDA de Netflix con pandas"
+title: "03 - EDA de Netflix con pandas"
 date: 2025-09-07
 number: 3
 status: "Completado"

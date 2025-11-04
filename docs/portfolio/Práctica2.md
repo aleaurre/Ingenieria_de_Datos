@@ -1,5 +1,5 @@
 ---
-title: "02 — Publicación del Portafolio (GitHub Pages + MkDocs)"
+title: "02 - Publicación del Portafolio (GitHub Pages + MkDocs)"
 date: 2025-09-07
 number: 2
 status: "Completado"

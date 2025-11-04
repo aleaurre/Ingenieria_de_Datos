@@ -1,5 +1,5 @@
 ---
-title: "08 — Feature Engineering con Pandas"
+title: "08 - Feature Engineering con Pandas"
 date: 2025-10-13
 number: 8
 status: "Completada"

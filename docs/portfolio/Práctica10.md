@@ -1,5 +1,5 @@
 ---
-title: "10 — PCA y Feature Selection"
+title: "10 - PCA y Feature Selection"
 date: 2025-10-24
 number: 10
 status: "Completada"

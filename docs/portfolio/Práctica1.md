@@ -1,5 +1,5 @@
 ---
-title: "01 — Análisis Exploratorio del dataset Iris"
+title: "01 - Análisis Exploratorio del dataset Iris"
 date: 2025-09-07
 number: 1
 status: "Completado"

@@ -1,5 +1,5 @@
 ---
-title: "04 — EDA Multifuentes + Joins (NYC Taxi, Zones, Calendar)"
+title: "04 - EDA Multifuentes + Joins (NYC Taxi, Zones, Calendar)"
 date: 2025-09-07
 number: 4
 status: "Completado"

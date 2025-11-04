@@ -1,5 +1,5 @@
 ---
-title: "05 — Missing Data Detective (Ames Housing)"
+title: "05 - Missing Data Detective (Ames Housing)"
 date: 2025-09-15
 number: 5
 status: "En progreso"

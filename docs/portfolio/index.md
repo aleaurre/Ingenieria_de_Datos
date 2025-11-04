@@ -224,12 +224,45 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
       <a class="md-button md-button--primary" href="Práctica10/">Abrir</a>
     </p>
   </div>
+
+  <div class="card">
+    <h3>Práctica 11 — Temporal Feature Engineering con Pandas</h3>
+    <p> Implementación temporal feature engineering con datos transaccionales de e-commerce.</p>
+    <p class="actions">
+      <span class="pill">Completado</span>
+      <a class="md-button md-button--primary" href="Práctica11/">Abrir</a>
+    </p>
+  </div>
+
 </div>
 
 
 ---
 
-## UT4: TBD
+## UT4: Datos Especiales
+
+## 🎯 Objetivos de aprendizaje
+
+Al completar **UT4: Datos Especiales**, el estudiante será capaz de:
+
+- Manipular datos **geoespaciales** utilizando *GeoPandas* y *Shapely*.
+- Extraer **features de audio** (*MFCC*) e **imagen** (*keypoints*) con librerías especializadas.
+- Construir **pipelines para datos no estructurados** e integrarlos en sistemas de analítica avanzada.
+
+## 📚 Lecturas mínimas  
+**Evaluación el 05/11**
+
+### 1. Geoespacial
+- Brust, A. V. (2023). *Ciencia de Datos para Gente Sociable* – Cap. 6: Información geográfica y mapas.  
+- [Kaggle Geospatial Analysis](https://www.kaggle.com/learn/geospatial-analysis)  
+- [GeoPandas Documentation – User Guide](https://geopandas.org/en/stable/docs/user_guide.html) *(Introduction, CRS, Plotting)*  
+
+### 2. Audio
+- [librosa Documentation – Tutorial + feature.mfcc](https://librosa.org/doc/main/feature.html#mfcc)
+
+### 3. Imagen
+- [OpenCV Documentation – Feature Detection (SIFT y ORB)](https://docs.opencv.org/master/d7/d00/tutorial_meanshift.html)
+
 
 <div class="cards-grid shortcuts portfolio-list">
 
