@@ -29,7 +29,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
-    <h3>Práctica 2 — Publicación del portafolio</h3>
+    <h3>Práctica 2 - Publicación del portafolio</h3>
     <p>Configurar repo, tema y deploy con GitHub Pages. Enlaces, navegación y estilo base.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -61,19 +61,19 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 
 **Lecturas totales:**
 
-- *Pandas Documentation* — <https://pandas.pydata.org/docs/>
-- *Kaggle Pandas* — Creating, Reading and Writing; Indexing, Selecting & Assigning;  
+- *Pandas Documentation* - <https://pandas.pydata.org/docs/>
+- *Kaggle Pandas* - Creating, Reading and Writing; Indexing, Selecting & Assigning;  
   Summary Functions and Maps; Grouping and Sorting
-- *Matplotlib Documentation* — <https://matplotlib.org/stable/contents.html>
-- *Seaborn Documentation* — <https://seaborn.pydata.org/>
-- *MkDocs Documentation* — <https://www.mkdocs.org/>
+- *Matplotlib Documentation* - <https://matplotlib.org/stable/contents.html>
+- *Seaborn Documentation* - <https://seaborn.pydata.org/>
+- *MkDocs Documentation* - <https://www.mkdocs.org/>
 - Mini curso **Pandas**
 - Mini curso **Data Visualization**
 
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
-    <h3>Práctica 1 — Exploración y limpieza</h3>
+    <h3>Práctica 1 - Exploración y limpieza</h3>
     <p>Análisis exploratorio, chequeos básicos y validación de supuestos.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -82,7 +82,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 3 — EDA Multi-fuentes y Joins - Fill in the Blanks</h3>
+    <h3>Práctica 3 - EDA Multi-fuentes y Joins - Fill in the Blanks</h3>
     <p>Análisis y visualizaciones a partir de caminos.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -91,7 +91,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 4 — EDA Netflix con Visualizaciones - Fill in the Blanks</h3>
+    <h3>Práctica 4 - EDA Netflix con Visualizaciones - Fill in the Blanks</h3>
     <p>Visualizaciones y narrativa con foco en decisiones contextualizadas a la plataforma.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -138,7 +138,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
-    <h3>Práctica 5 — Missing Data Detective </h3>
+    <h3>Práctica 5 - Missing Data Detective </h3>
     <p>Aprender a detectar y analizar datos faltantes (MCAR, MAR, MNAR).</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -147,7 +147,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 6 — Feature Scaling & Anti-Leakage </h3>
+    <h3>Práctica 6 - Feature Scaling & Anti-Leakage </h3>
     <p> Generación de un Pipeline mediante Exploración Abierta.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -156,7 +156,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 7 — Detectar y Corregir Sesgo con Fairlearn </h3>
+    <h3>Práctica 7 - Detectar y Corregir Sesgo con Fairlearn </h3>
     <p> Detección del sesgo en tres datasets distintos.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -182,10 +182,10 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 **Lecturas mínimas (Evaluación el 01/10):**
 
 - Zheng, A., & Casari, A. (2018). *Feature Engineering for Machine Learning*. O’Reilly Media.  
-1. Cap. 2 (Fancy Tricks with Simple Numbers) – Transformaciones numéricas, binarización, interacciones  
-2. Cap. 5 (Categorical Variables) – One-hot, label, ordinal y target encoding  
-3. Cap. 6 (Dimensionality Reduction) – PCA, feature selection, curse of dimensionality 
-- [Kaggle Feature Engineering – Curso Completo](https://www.kaggle.com/learn/feature-engineering)
+1. Cap. 2 (Fancy Tricks with Simple Numbers) - Transformaciones numéricas, binarización, interacciones  
+2. Cap. 5 (Categorical Variables) - One-hot, label, ordinal y target encoding  
+3. Cap. 6 (Dimensionality Reduction) - PCA, feature selection, curse of dimensionality 
+- [Kaggle Feature Engineering - Curso Completo](https://www.kaggle.com/learn/feature-engineering)
 
 **Lecturas Totales:**
 
@@ -199,7 +199,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
-    <h3>Práctica 8 — Feature Engineering con Pandas </h3>
+    <h3>Práctica 8 - Feature Engineering con Pandas </h3>
     <p> Creación de Features derivadas que capturen patrones no obvios de los datos.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -208,7 +208,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 9 — Encoding Avanzado y Target Encoding </h3>
+    <h3>Práctica 9 - Encoding Avanzado y Target Encoding </h3>
     <p> Comparar diferentes técnicas de encoding para maximizar la precisión del modelo de clasificación.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -223,7 +223,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
 <div class="cards-grid shortcuts portfolio-list">
 
   <div class="card">
-    <h3>Práctica 10 — PCA y Feature Selection </h3>
+    <h3>Práctica 10 - PCA y Feature Selection </h3>
     <p> Comparar PCA vs Feature Selection, evaluando trade-offs en contexto de negocios.</p>
     <p class="actions">
       <span class="pill">Completado</span>
@@ -232,7 +232,7 @@ Pequeño hub para navegar las prácticas. Cada entrada sigue la estructura:
   </div>
 
   <div class="card">
-    <h3>Práctica 11 — Temporal Feature Engineering con Pandas</h3>
+    <h3>Práctica 11 - Temporal Feature Engineering con Pandas</h3>
     <p> Implementación temporal feature engineering con datos transaccionales de e-commerce.</p>
     <p class="actions">
       <span class="pill">Completado</span>
