@@ -144,18 +144,26 @@ Las 5 features más influyentes del pipeline mixto:
 
 - [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Práctica9.ipynb) 
 
+![](../../assets/Práctica9/CardinalidadVariablesCategóricas.png)
+
 <div class="cards-grid media">
 
   <div class="card">
-    <img src="../../assets/Práctica9/CardinalidadVariablesCategóricas.png" alt="Cadinalidad de las Variables Categóricas" loading="lazy">
+    <alt="Cadinalidad de las Variables Categóricas" loading="lazy">
     <div class="caption">
       Distribución de cardinalidad
       <small>Análisis de cardinalidad: `native-country` presenta 42 categorías (media).</small>
     </div>
   </div>
 
+</div>
+
+![](../../assets/Práctica9/ImportanciaFeatures.png)
+
+<div class="cards-grid media">
+
   <div class="card">
-    <img src="../../assets/Práctica9/ImportanciaFeatures.png" alt="Importancia de las Features" loading="lazy">
+    <alt="Importancia de las Features" loading="lazy">
     <div class="caption">
       Feature Importance
       <small>Ranking de variables según Random Forest.</small>
@@ -164,18 +172,28 @@ Las 5 features más influyentes del pipeline mixto:
 
 </div>
 
+
+![](../../assets/Práctica9/ComparaciónEncodings.png)
+
 <div class="cards-grid media">
 
   <div class="card">
-    <img src="../../assets/Práctica9/ComparaciónEncodings.png" alt="Comparación de Métodos de Encoding" loading="lazy">
+    <alt="Comparación de Métodos de Encoding" loading="lazy">
     <div class="caption">
       Comparación de métodos
       <small>Accuracy, AUC y F1 entre Label, One-Hot, Target y Pipeline.</small>
     </div>
   </div>
 
+</div>
+
+
+![](../../assets/Práctica9/DistribuciónFeatures.png)
+
+<div class="cards-grid media">
+
   <div class="card">
-    <img src="../../assets/Práctica9/DistribuciónFeatures.png" alt="Distribución de Features" loading="lazy">
+    <alt="Distribución de Features" loading="lazy">
     <div class="caption">
       SHAP Summary
       <small>Importancia por tipo de feature (numéricas vs. codificadas).</small>

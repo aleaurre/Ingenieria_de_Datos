@@ -98,10 +98,13 @@ Se requieren **39 componentes** para explicar el **80 % de la varianza**, lo que
 | **PC1 (13.4%)** | OverallQual, YearBuilt, GarageCars, GrLivArea | Tamaño y calidad global de la vivienda |
 | **PC2 (5.0%)** | 2ndFlrSF, TotRmsAbvGrd, BedroomAbvGr | Distribución interna y cantidad de ambientes |
 
+
+![](../../assets/Práctica10/LoadingsPlot.png)
+
 <div class="cards-grid media">
 
   <div class="card">
-    <img src="../../assets/Práctica10/LoadingsPlot.png" alt="Loadings PCA" loading="lazy">
+    <alt="Loadings PCA" loading="lazy">
     <div class="caption">
       Loadings PC1–PC2  
       <small>Las variables estructurales dominan el primer componente principal.</small>
@@ -141,18 +144,26 @@ Captura relaciones más complejas, obteniendo el mejor balance entre **precisió
 | F-test | \$26,494 | 0.8875 |
 | **Mutual Information** | **\$26,137** | **0.8903** |
 
+
+![](../../assets/Práctica10/Top20Features.png)
+
 <div class="cards-grid media">
 
   <div class="card">
-    <img src="../../assets/Práctica10/Top20Features.png" alt="Top 20 F-test" loading="lazy">
+    <alt="Top 20 F-test" loading="lazy">
     <div class="caption">
       F-test  
       <small>Ranking de variables linealmente correlacionadas con el precio.</small>
     </div>
   </div>
 
+</div>
+
+![](../../assets/Práctica10/Top30Features.png)
+<div class="cards-grid media">
+
   <div class="card">
-    <img src="../../assets/Práctica10/Top30Features.png" alt="Top 30 MI" loading="lazy">
+    <alt="Top 30 MI" loading="lazy">
     <div class="caption">
       Mutual Information  
       <small>Captura dependencias no lineales adicionales (p. ej. Neighborhood, FireplaceQu).</small>
@@ -160,6 +171,7 @@ Captura relaciones más complejas, obteniendo el mejor balance entre **precisió
   </div>
 
 </div>
+
 
 ---
 
@@ -174,23 +186,38 @@ Favorece sparsidad, seleccionando coeficientes no nulos.
 ### Random Forest Feature Importance
 Evalúa importancia de cada feature según su contribución a la reducción del error.
 
+
+![](../../assets/Práctica10/TopRandomForest.png)
+
 <div class="cards-grid media">
 
   <div class="card">
-    <img src="../../assets/Práctica10/TopRandomForest.png" alt="Ranking RF" loading="lazy">
+    <alt="Ranking RF" loading="lazy">
     <div class="caption">
       Random Forest Ranking  
       <small>Las variables estructurales y de superficie dominan la importancia global.</small>
     </div>
   </div>
 
+</div>
+
+![](../../assets/Práctica10/TopCoeficienteLasso.png)
+
+<div class="cards-grid media">
+
   <div class="card">
-    <img src="../../assets/Práctica10/TopCoeficienteLasso.png" alt="Coeficientes Lasso" loading="lazy">
+    <alt="Coeficientes Lasso" loading="lazy">
     <div class="caption">
       Coeficientes Lasso  
       <small>Regularización que resalta predictores robustos y elimina ruido.</small>
     </div>
   </div>
+
+</div>
+
+![](../../assets/Práctica10/TopRandomForest.png)
+
+<div class="cards-grid media">
 
   <div class="card">
     <img src="../../assets/Práctica10/TopRandomForest.png" alt="Importancia RF" loading="lazy">

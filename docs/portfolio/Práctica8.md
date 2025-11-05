@@ -179,9 +179,11 @@ Los datos reales presentan ruido, correlaciones espurias y efectos de localizaci
 
 - [**Notebook (.ipynb)**](../../evidencias/Aurrecochea-Práctica8.ipynb) — ejecución íntegra del pipeline de *feature engineering*.
 
+![](../../assets/Práctica8/output.png)
+
 <div class="cards-grid media">
   <div class="card">
-    <img src="../../assets/Práctica8/output.png" alt="Distribución de nuevas features" loading="lazy">
+    <alt="Distribución de nuevas features" loading="lazy">
     <div class="caption">
       Distribución y normalización de variables derivadas
       <small>Comparación entre features sintéticas y transformadas</small>
