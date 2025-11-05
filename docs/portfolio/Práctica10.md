@@ -311,13 +311,7 @@ Evalúa importancia de cada feature según su contribución a la reducción del 
 
 ### Resultados
 
-| Método | Nº Features | RMSE | R² | Interpretabilidad | Tiempo (s) |
-|:--|--:|--:|--:|:--|--:|
-| PCA (0.8 varianza) | 39 | 26,715 | 0.885 | Baja | 2.1 |
-| Mutual Information | 39 | 26,137 | **0.890** | Alta | 1.9 |
-| RFE (RF) | 30 | 26,245 | 0.888 | Media | 3.6 |
-| LassoCV | 25 | 26,690 | 0.884 | Alta | 1.7 |
-| **Pipeline híbrido (PCA+MI+RFE)** | **28** | **26,045** | **0.892** | Alta | **2.5** |
+![](../../assets/Práctica10/results_table.png)
 
 > El pipeline compuesto supera ligeramente el rendimiento individual, manteniendo una interpretabilidad razonable gracias a la trazabilidad de cada etapa.
 

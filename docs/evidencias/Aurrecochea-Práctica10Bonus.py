@@ -5,162 +5,176 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import time
+import os
+from datetime import datetime
 
-from sklearn.model_selection import train_test_split, cross_val_score, KFold
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.feature_selection import SelectKBest, mutual_info_regression, RFE
 from sklearn.linear_model import LassoCV
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.pipeline import Pipeline
-from sklearn.metrics import r2_score, mean_squared_error
-import joblib
-import json
-import os
+from sklearn.metrics import mean_squared_error, r2_score
+import kagglehub
 
 # ============================================================
 # Carga del dataset Ames Housing
 # ============================================================
 
-df = pd.read_csv("AmesHousing.csv")
-# Variable objetivo y predictores
-target = "SalePrice"
-X = df.drop(columns=[target])
-y = df[target]
+path = kagglehub.dataset_download("shashanknecrothapa/ames-housing-dataset")
+print("Path to dataset files:", path)
+df = pd.read_csv(f"{path}/AmesHousing.csv")
 
-# Eliminamos columnas no numéricas o las convertimos temporalmente
-X = X.select_dtypes(include=[np.number]).fillna(0)
+target = "SalePrice"
+X = df.select_dtypes(include=[np.number]).drop(columns=[target]).fillna(0)
+y = df[target]
 
 print(f"Dimensiones iniciales: {X.shape}")
 
 # ============================================================
-# División de datos y estandarización
+# División de datos
 # ============================================================
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# ============================================================
-# Definición de los módulos individuales
-# ============================================================
-
-# PCA (mantiene el 80% de la varianza)
-pca = PCA(n_components=0.8, random_state=42)
-
-# Filter Method: Mutual Information (top 30 features)
-selector_mi = SelectKBest(mutual_info_regression, k=30)
-
-# Wrapper Method: RFE con Random Forest
 rf_model = RandomForestRegressor(n_estimators=150, random_state=42)
-rfe = RFE(rf_model, n_features_to_select=20, step=1)
-
-# Embedded Method: LassoCV
-lasso = LassoCV(cv=5, random_state=42, n_alphas=100)
 
 # ============================================================
+# Función auxiliar de evaluación
+# ============================================================
+
+def evaluate_pipeline(name, pipeline, interpretabilidad):
+    start = time.time()
+    pipeline.fit(X_train, y_train)
+    y_pred = pipeline.predict(X_test)
+    try:
+        rmse = mean_squared_error(y_test, y_pred, squared=False)
+    except TypeError:
+        rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+    r2 = r2_score(y_test, y_pred)
+    elapsed = time.time() - start
+
+    # Determinar número de features efectivas
+    try:
+        n_features = pipeline[-1].n_features_in_
+    except Exception:
+        try:
+            n_features = pipeline[-2].n_features_in_
+        except Exception:
+            n_features = X.shape[1]
+
+    return {
+        "Método": name,
+        "Nº Features": n_features,
+        "RMSE": rmse,
+        "R²": r2,
+        "Interpretabilidad": interpretabilidad,
+        "Tiempo (s)": elapsed,
+    }
+
+# ============================================================
+# Definición de métodos
+# ============================================================
+
+models = [
+    ("PCA (0.8 varianza)", Pipeline([
+        ("scaler", StandardScaler()),
+        ("pca", PCA(n_components=0.8, random_state=42)),
+        ("rf", rf_model)
+    ]), "Baja"),
+    ("Mutual Information", Pipeline([
+        ("scaler", StandardScaler()),
+        ("mi", SelectKBest(mutual_info_regression, k=30)),
+        ("rf", rf_model)
+    ]), "Alta"),
+    ("RFE (RF)", Pipeline([
+        ("scaler", StandardScaler()),
+        ("rfe", RFE(rf_model, n_features_to_select=20, step=1)),
+        ("rf", rf_model)
+    ]), "Media"),
+    ("LassoCV", Pipeline([
+        ("scaler", StandardScaler()),
+        ("lasso", LassoCV(cv=5, random_state=42))
+    ]), "Alta"),
+]
+
 # Pipeline híbrido
-# ============================================================
-
-hybrid_pipeline = Pipeline([
+hybrid = Pipeline([
     ("scaler", StandardScaler()),
     ("pca", PCA(n_components=0.8, random_state=42)),
-    ("select_mi", SelectKBest(mutual_info_regression, k=30)),
+    ("mi", SelectKBest(mutual_info_regression, k=30)),
     ("rfe", RFE(RandomForestRegressor(n_estimators=100, random_state=42), n_features_to_select=20)),
     ("lasso", LassoCV(cv=5, random_state=42)),
 ])
 
 # ============================================================
-# Entrenamiento y evaluación
+# Ejecución de experimentos
 # ============================================================
 
-print("Entrenando pipeline híbrido...")
-
-hybrid_pipeline.fit(X_train, y_train)
-y_pred = hybrid_pipeline.predict(X_test)
-
-rmse = mean_squared_error(y_test, y_pred, squared=False)
-r2 = r2_score(y_test, y_pred)
-
-print(f"RMSE: {rmse:.2f}")
-print(f"R²: {r2:.4f}")
-
-# ============================================================
-#  Comparación con otros métodos individuales
-# ============================================================
-
-def evaluate_model(name, model):
-    model.fit(X_train_scaled, y_train)
-    y_pred = model.predict(X_test_scaled)
-    rmse = mean_squared_error(y_test, y_pred, squared=False)
-    r2 = r2_score(y_test, y_pred)
-    return {"Método": name, "RMSE": rmse, "R²": r2}
-
-models = [
-    ("PCA", Pipeline([("scaler", StandardScaler()), ("pca", PCA(n_components=0.8)), ("rf", rf_model)])),
-    ("MutualInfo", Pipeline([("scaler", StandardScaler()), ("mi", selector_mi), ("rf", rf_model)])),
-    ("RFE", Pipeline([("scaler", StandardScaler()), ("rfe", rfe), ("rf", rf_model)])),
-    ("Lasso", Pipeline([("scaler", StandardScaler()), ("lasso", lasso)]))
-]
-
-results = [evaluate_model(name, model) for name, model in models]
-results.append({"Método": "Híbrido (PCA+MI+RFE+Lasso)", "RMSE": rmse, "R²": r2})
+results = [evaluate_pipeline(name, pipe, interpret) for name, pipe, interpret in models]
+results.append(evaluate_pipeline("Pipeline híbrido (PCA+MI+RFE)", hybrid, "Alta"))
 
 df_results = pd.DataFrame(results)
-df_results = df_results.sort_values("R²", ascending=False)
-df_results.reset_index(drop=True, inplace=True)
+df_results["RMSE"] = df_results["RMSE"].round(3)
+df_results["R²"] = df_results["R²"].round(3)
+df_results["Tiempo (s)"] = df_results["Tiempo (s)"].round(2)
+df_results = df_results.sort_values("R²", ascending=False).reset_index(drop=True)
 
-print("\n Resultados comparativos:\n")
+print("\nResultados calculados:")
 print(df_results)
 
 # ============================================================
-# Ranking de importancia de variables (Random Forest)
+# 📊 Generación de imagen tipo tabla (auto-calculada)
 # ============================================================
 
-rf = RandomForestRegressor(n_estimators=200, random_state=42)
-rf.fit(X_train_scaled, y_train)
-
-importances = pd.DataFrame({
-    "Feature": X.columns,
-    "Importance": rf.feature_importances_
-}).sort_values("Importance", ascending=False).head(20)
-
-plt.figure(figsize=(10,6))
-plt.barh(importances["Feature"], importances["Importance"])
-plt.title("Top 20 Features - Random Forest Importance")
-plt.gca().invert_yaxis()
-plt.tight_layout()
-plt.savefig("artifacts/importance_plot.png", dpi=150)
-plt.show()
-
-# ============================================================
-# 9️Guardado de artefactos
-# ============================================================
+import matplotlib.pyplot as plt
+from datetime import datetime
+import os
 
 os.makedirs("artifacts", exist_ok=True)
 
-# Pipeline completo
-joblib.dump(hybrid_pipeline, "artifacts/hybrid_feature_selection_pipeline.joblib")
+fig, ax = plt.subplots(figsize=(9, 3))
+ax.axis("off")
 
-# Resultados de comparación
-df_results.to_csv("artifacts/metrics_comparison.csv", index=False)
+# Colores estilo portfolio (burgundy + azul)
+colors = {"header": "#3B0A45", "bg": "#F5F5F7"}
 
-# Ranking de features
-importances.to_csv("artifacts/feature_ranking_comparativo.csv", index=False)
+# Crear tabla con los valores realmente calculados
+table = ax.table(
+    cellText=df_results.values,
+    colLabels=df_results.columns,
+    loc="center",
+    cellLoc="center",
+)
 
-# Reporte JSON resumido
-report = {
-    "RMSE": float(rmse),
-    "R2": float(r2),
-    "BestModel": "HybridPipeline",
-    "FeaturesSelected": int(importances.shape[0]),
-}
-with open("artifacts/model_hybrid_report.json", "w") as f:
-    json.dump(report, f, indent=4)
+# Estilo general
+table.auto_set_font_size(False)
+table.set_fontsize(9)
+table.scale(1.2, 1.3)
 
-# Diagrama textual del pipeline
-with open("artifacts/pipeline_diagram.txt", "w") as f:
-    f.write(str(hybrid_pipeline))
+# Encabezado coloreado
+for (row, col), cell in table.get_celld().items():
+    if row == 0:
+        cell.set_facecolor(colors["header"])
+        cell.set_text_props(color="white", weight="bold")
+    elif row % 2 == 0:
+        cell.set_facecolor("#FFFFFF")
+    else:
+        cell.set_facecolor(colors["bg"])
 
-print("\n Artefactos guardados en carpeta /artifacts")
+plt.title(
+    f"Resultados del Pipeline Híbrido — {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+    fontsize=11, color=colors["header"], fontweight="bold",
+)
+plt.tight_layout()
+plt.savefig("artifacts/results_table.png", dpi=250, bbox_inches="tight")
+plt.close()
+
+print("\n✅ Imagen generada: artifacts/results_table.png")
