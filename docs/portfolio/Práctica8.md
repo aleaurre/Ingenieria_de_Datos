@@ -248,11 +248,8 @@ Se integraron todas las transformaciones dentro de un **Pipeline (ColumnTransfor
 - Entrenamiento (`RandomForestRegressor`)
 
 *Métricas finales (Ames Housing expandido):*
-| Métrica | Valor |
-|----------|--------|
-| R² test | 0.87 |
-| MAE test | 8 940.12 |
-| R² CV (media ± std) | 0.85 ± 0.03 |
+
+![](../../assets/Práctica8Bonus/resultados.png)
 
 
 ### Conclusiones finales

@@ -41,8 +41,56 @@ from sklearn.preprocessing import (
 
 RANDOM_SEED = 42
 
-PATH_SYNTHETIC = "data/synthetic_housing.csv"
+import os
+import pandas as pd
+from sklearn.datasets import fetch_openml
+
+os.makedirs("data", exist_ok=True)
+
+# === Dataset sintético ===
+URL_SYNTHETIC = "https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets/housing/housing.csv"
+
+# === Dataset Ames ===
 PATH_AMES = "data/ames_mini.csv"
+if not os.path.exists(PATH_AMES):
+    print("Descargando dataset Ames desde OpenML...")
+    ames = fetch_openml(name="house_prices", as_frame=True)
+    ames.frame.to_csv(PATH_AMES, index=False)
+
+print("Dataset descargado correctamente.")
+
+
+# Crear dataset sintético si no cumple los requisitos
+PATH_SYNTHETIC = "data/synthetic_housing.csv"
+REQUIRED_SYNTH_COLS = [
+    "price", "sqft", "bedrooms", "bathrooms", "year_built",
+    "garage_spaces", "lot_size", "distance_to_city", "school_rating", "crime_rate"
+]
+
+if not os.path.exists(PATH_SYNTHETIC):
+    print("⚙️ Generando dataset sintético artificial compatible...")
+    n = 1000
+    rng = np.random.default_rng(42)
+    df_synth = pd.DataFrame({
+        "price": rng.normal(250_000, 80_000, n).clip(50_000, 1_000_000),
+        "sqft": rng.normal(1800, 600, n).clip(400, 4000),
+        "bedrooms": rng.integers(1, 6, n),
+        "bathrooms": rng.integers(1, 4, n),
+        "year_built": rng.integers(1950, 2025, n),
+        "garage_spaces": rng.integers(0, 3, n),
+        "lot_size": rng.normal(5000, 2000, n).clip(1000, 20000),
+        "distance_to_city": rng.normal(10, 5, n).clip(0, 50),
+        "school_rating": rng.normal(7, 2, n).clip(1, 10),
+        "crime_rate": rng.normal(0.3, 0.1, n).clip(0, 1),
+    })
+    os.makedirs("data", exist_ok=True)
+    df_synth.to_csv(PATH_SYNTHETIC, index=False)
+    print("✅ synthetic_housing.csv generado exitosamente.")
+else:
+    print("Dataset sintético encontrado, continuando...")
+
+
+
 
 # Esquema esperado para cada dataset
 REQUIRED_SYNTH_COLS = [
@@ -211,7 +259,7 @@ def simple_ols_with_onehot(ames_df: pd.DataFrame) -> float:
     base_feats = ["price_per_sqft", "property_age"]
     cat = ["Neighborhood"]
 
-    ohe = OneHotEncoder(drop="first", sparse=False, handle_unknown="ignore")
+    ohe = OneHotEncoder(drop="first", sparse_output=False, handle_unknown="ignore")
     Z = ohe.fit_transform(ames_df[cat])
     zcols = ohe.get_feature_names_out(cat)
     Zdf = pd.DataFrame(Z, columns=zcols, index=ames_df.index)
@@ -238,7 +286,7 @@ def build_and_eval_pipeline(ames_df: pd.DataFrame) -> dict:
         ]
     )
     categorical_transformer = OneHotEncoder(
-        drop="first", sparse=False, handle_unknown="ignore"
+        drop="first", sparse_output=False, handle_unknown="ignore"
     )
 
     preprocessor = ColumnTransformer(
@@ -340,9 +388,49 @@ def main():
         f"     R² CV (mean): {metrics['r2_cv_mean']:.4f} ± {metrics['r2_cv_std']:.4f}\n"
         f"     n_total/train/test: {metrics['n_total']}/{metrics['n_train']}/{metrics['n_test']}"
     )
+    return r2_full, r2_sel, r2_ols, metrics
 
-    print("\n✅ BONUS terminado correctamente.")
 
+
+
+# ------------------------ VISUALIZACIÓN FINAL ------------------------
+
+import matplotlib.pyplot as plt
+
+def plot_summary(r2_full, r2_sel, r2_ols, metrics):
+    """Visualiza la comparación entre modelos Synthetic y Ames"""
+    bars = ["Synthetic (Full)", "Synthetic (RFE-10)", "Ames (OLS+OneHot)", "Ames (Pipeline+RF)"]
+    r2_values = [r2_full, r2_sel, r2_ols, metrics["r2_cv_mean"]]
+    mae_values = [0, 0, 0, metrics["mae_test"]]
+
+    fig, ax1 = plt.subplots(figsize=(9, 5))
+    ax1.bar(bars, r2_values, color="#4682B4", alpha=0.75)
+    ax1.set_ylabel("R²", color="#4682B4")
+    ax1.tick_params(axis="y", labelcolor="#4682B4")
+    ax1.set_ylim(0, 1.1)
+
+    for i, v in enumerate(r2_values):
+        ax1.text(i, v + 0.02, f"{v:.2f}", ha="center", color="#1f1f1f")
+
+    ax2 = ax1.twinx()
+    ax2.plot(bars, mae_values, color="#CD5C5C", marker="o", linewidth=2)
+    ax2.set_ylabel("MAE", color="#CD5C5C")
+    ax2.tick_params(axis="y", labelcolor="#CD5C5C")
+
+    plt.title("Comparación de desempeño — Synthetic vs Ames", fontsize=13, weight="bold")
+    plt.grid(axis="y", linestyle="--", alpha=0.4)
+    plt.tight_layout()
+
+    os.makedirs("docs/assets/Práctica8Bonus", exist_ok=True)
+    output_path = "docs/assets/Práctica8Bonus/resultados.png"
+    plt.savefig(output_path, dpi=120)
+    print(f"📊 Gráfico guardado en: {output_path}")
+    plt.show()
+
+
+# ------------------------ EJECUCIÓN PRINCIPAL ------------------------
 
 if __name__ == "__main__":
-    main()
+    r2_full, r2_sel, r2_ols, metrics = main()
+    plot_summary(r2_full, r2_sel, r2_ols, metrics)
+

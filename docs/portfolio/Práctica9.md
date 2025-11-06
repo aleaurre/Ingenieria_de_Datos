@@ -291,6 +291,9 @@ El grupo logró un **pipeline robusto, modular y reproducible**, alineado con la
 > Motivación: evita la **explosión dimensional** del One-Hot para cardinalidad alta y sigue la pauta de análisis/comparación de la práctica original.
 
 ### Resultados (resumen)
+
+![](../../assets/Práctica9/Bonus.png)
+
 - **Branched (CatBoost/Target) + HGB** logra el **mejor balance** entre AUC/Accuracy y dimensionalidad en presencia de categorías con muchos niveles.
 - **Binary/Hash** ofrece líneas base **compactas** y favorece a *LogReg*; útiles en escenarios de streaming o memoria restringida.
 - **One-Hot (all)** se acerca al mejor AUC cuando la cardinalidad efectiva es baja, a costa de más columnas.

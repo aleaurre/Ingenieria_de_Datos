@@ -153,7 +153,7 @@ def make_branched_preprocessor(
     """
     Pipeline branched:
       - One-Hot en baja cardinalidad
-      - Target Encoding (CatBoostEncoder por defecto) en alta cardinalidad
+      - CatBoostEncoder en alta cardinalidad
       - StandardScaler en numéricas
     """
     onehot_branch = Pipeline(steps=[
@@ -163,10 +163,7 @@ def make_branched_preprocessor(
 
     target_branch = Pipeline(steps=[
         ("imputer", SimpleImputer(strategy="most_frequent")),
-        # Podés alternar entre TargetEncoder y CatBoostEncoder
-        ("tenc", CatBoostEncoder(a=smoothing, b=smoothing)),  # prior/post smoothing
-        # Alternativa:
-        # ("tenc", TargetEncoder(smoothing=smoothing))
+        ("tenc", CatBoostEncoder(random_state=42))  # ✅ sin smoothing
     ])
 
     numeric_branch = Pipeline(steps=[
@@ -184,6 +181,7 @@ def make_branched_preprocessor(
         verbose_feature_names_out=True,
     )
     return pre
+
 
 
 # =========================
@@ -261,23 +259,32 @@ def build_and_compare_encoders(
 
     # 2) Binary Encoding (reduce dimensión log2(N))
     pre_binary = ColumnTransformer(transformers=[
-        ("bin", Pipeline([("imp", SimpleImputer(strategy="most_frequent")),
-                          ("be", BinaryEncoder(cols=cat_cols))]), cat_cols),
-        ("num", Pipeline([("imp", SimpleImputer(strategy="median")),
-                          ("scaler", StandardScaler())]), num_cols)
-    ], remainder="drop", verbose_feature_names_out=True)
+    ("bin", Pipeline([
+        ("imp", SimpleImputer(strategy="most_frequent")),
+        ("be", BinaryEncoder())  # ✅ sin cols=cat_cols
+    ]), cat_cols),
+    ("num", Pipeline([
+        ("imp", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler())
+    ]), num_cols)], remainder="drop", verbose_feature_names_out=True)
+
 
     results.append(run_experiment("Binary + LogReg", pre_binary, logreg, X_train, y_train, X_test, y_test, export_dir))
     results.append(run_experiment("Binary + HGB", pre_binary, hgb, X_train, y_train, X_test, y_test, export_dir))
 
     # 3) Hashing Encoding (streaming-friendly, dimensionalidad fija)
+    # 3) Hashing Encoding (streaming-friendly, dimensionalidad fija)
     hash_dim = 64  # ajustable
     pre_hash = ColumnTransformer(transformers=[
-        ("hash", Pipeline([("imp", SimpleImputer(strategy="most_frequent")),
-                           ("he", HashingEncoder(cols=cat_cols, n_components=hash_dim, drop_invariant=False))]), cat_cols),
-        ("num", Pipeline([("imp", SimpleImputer(strategy="median")),
-                          ("scaler", StandardScaler())]), num_cols)
-    ], remainder="drop", verbose_feature_names_out=True)
+    ("hash", Pipeline([
+        ("imp", SimpleImputer(strategy="most_frequent")),
+        ("he", HashingEncoder(n_components=hash_dim, drop_invariant=False))  # ✅ sin cols
+    ]), cat_cols),
+    ("num", Pipeline([
+        ("imp", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler())
+    ]), num_cols)], remainder="drop", verbose_feature_names_out=True)
+
 
     results.append(run_experiment("Hash64 + LogReg", pre_hash, logreg, X_train, y_train, X_test, y_test, export_dir))
     results.append(run_experiment("Hash64 + HGB", pre_hash, hgb, X_train, y_train, X_test, y_test, export_dir))
@@ -296,11 +303,10 @@ def build_and_compare_encoders(
     # Los parámetros del encoder dentro del ColumnTransformer se referencian por nombre:
     # pre__high_card__tenc__a  y  pre__high_card__tenc__b
     param_grid = {
-        "pre__high_card__tenc__a": [1, 5, 10, 20, 50, 100],
-        "pre__high_card__tenc__b": [1, 5, 10, 20, 50, 100],
-        "clf__max_depth": [None, 6, 10],
-        "clf__learning_rate": [0.05, 0.1],
-    }
+    "pre__high_card__tenc__a": [1, 5, 10, 20, 50, 100], 
+    "clf__max_depth": [None, 6, 10],
+    "clf__learning_rate": [0.05, 0.1],}
+
 
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     gs = GridSearchCV(grid_pipe, param_grid, cv=cv, n_jobs=-1, scoring="roc_auc", refit=True, verbose=0)
